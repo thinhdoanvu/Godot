@@ -1,0 +1,88 @@
+[gd_scene load_steps=7 format=2]
+
+[ext_resource path="res://fonts/BeVietnamPro-ExtraLight.ttf" type="DynamicFontData" id=1]
+[ext_resource path="res://loading/Loading.png" type="Texture" id=2]
+[ext_resource path="res://sences/Loading.gd" type="Script" id=3]
+
+[sub_resource type="DynamicFont" id=22]
+size = 31
+font_data = ExtResource( 1 )
+
+[sub_resource type="Animation" id=23]
+length = 0.001
+tracks/0/type = "value"
+tracks/0/path = NodePath("txt_loading:percent_visible")
+tracks/0/interp = 1
+tracks/0/loop_wrap = true
+tracks/0/imported = false
+tracks/0/enabled = true
+tracks/0/keys = {
+"times": PoolRealArray( 0 ),
+"transitions": PoolRealArray( 1 ),
+"update": 0,
+"values": [ 1.0 ]
+}
+tracks/1/type = "value"
+tracks/1/path = NodePath("../but_finish:visible")
+tracks/1/interp = 1
+tracks/1/loop_wrap = true
+tracks/1/imported = false
+tracks/1/enabled = true
+tracks/1/keys = {
+"times": PoolRealArray( 0 ),
+"transitions": PoolRealArray( 1 ),
+"update": 0,
+"values": [ false ]
+}
+
+[sub_resource type="Animation" id=24]
+resource_name = "run"
+tracks/0/type = "value"
+tracks/0/path = NodePath("txt_loading:percent_visible")
+tracks/0/interp = 1
+tracks/0/loop_wrap = true
+tracks/0/imported = false
+tracks/0/enabled = true
+tracks/0/keys = {
+"times": PoolRealArray( 0, 1 ),
+"transitions": PoolRealArray( 1, 1 ),
+"update": 0,
+"values": [ 0.0, 1.0 ]
+}
+
+[node name="Loading" type="Control"]
+anchor_right = 1.0
+anchor_bottom = 1.0
+margin_right = 1200.0
+margin_bottom = 700.0
+script = ExtResource( 3 )
+__meta__ = {
+"_edit_use_anchors_": false
+}
+
+[node name="bg_loading" type="TextureRect" parent="."]
+anchor_right = 1.0
+anchor_bottom = 1.0
+texture = ExtResource( 2 )
+
+[node name="txt_loading" type="Label" parent="."]
+anchor_top = 1.0
+anchor_right = 1.0
+anchor_bottom = 1.0
+margin_left = 2.0
+margin_top = -379.0
+margin_right = 2.0
+margin_bottom = -327.0
+custom_fonts/font = SubResource( 22 )
+text = "Đang tải trang, vui lòng đợi ..."
+align = 1
+valign = 1
+__meta__ = {
+"_edit_use_anchors_": false
+}
+
+[node name="ani_loading" type="AnimationPlayer" parent="."]
+anims/RESET = SubResource( 23 )
+anims/run = SubResource( 24 )
+
+[connection signal="animation_finished" from="ani_loading" to="." method="_on_ani_loading_animation_finished"]

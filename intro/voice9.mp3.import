@@ -1,0 +1,15 @@
+[remap]
+
+importer="mp3"
+type="AudioStreamMP3"
+path="res://.import/voice9.mp3-80db2be0b8c1372ded569eb68faa86fb.mp3str"
+
+[deps]
+
+source_file="res://intro/voice9.mp3"
+dest_files=[ "res://.import/voice9.mp3-80db2be0b8c1372ded569eb68faa86fb.mp3str" ]
+
+[params]
+
+loop=false
+loop_offset=0
