@@ -1,0 +1,5 @@
+Full screen - without edit theme already
+Project - Settings - Display - Windows - Mode - 2D
+Project - Settings - Display - Windows - Aspect - Keep
+Project - Export - index - zip (index.zip) - upload to itch.io
+(Delete zip before)
