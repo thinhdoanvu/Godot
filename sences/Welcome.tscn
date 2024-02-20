@@ -1,0 +1,204 @@
+[gd_scene load_steps=38 format=2]
+
+[ext_resource path="res://pics/tucay_welcome.png" type="Texture" id=1]
+[ext_resource path="res://pics/petri_gray.png" type="Texture" id=2]
+[ext_resource path="res://pics/petri_empty_gray.png" type="Texture" id=3]
+[ext_resource path="res://pics/quecay_full.png" type="Texture" id=4]
+[ext_resource path="res://pics/Denkho_gray.png" type="Texture" id=5]
+[ext_resource path="res://fonts/BeVietnamPro-ExtraBold.ttf" type="DynamicFontData" id=6]
+[ext_resource path="res://fonts/BeVietnamPro-Black.ttf" type="DynamicFontData" id=7]
+[ext_resource path="res://sences/Welcome.gd" type="Script" id=8]
+[ext_resource path="res://sound/mouse_click.wav" type="AudioStream" id=9]
+[ext_resource path="res://pics/logo_NTU.png" type="Texture" id=10]
+[ext_resource path="res://animated/bunsen_burner9.png" type="Texture" id=11]
+[ext_resource path="res://animated/bunsen_burner14.png" type="Texture" id=12]
+[ext_resource path="res://animated/bunsen_burner16.png" type="Texture" id=13]
+[ext_resource path="res://animated/bunsen_burner18.png" type="Texture" id=14]
+[ext_resource path="res://animated/bunsen_burner10.png" type="Texture" id=15]
+[ext_resource path="res://animated/bunsen_burner19.png" type="Texture" id=16]
+[ext_resource path="res://animated/bunsen_burner7.png" type="Texture" id=17]
+[ext_resource path="res://animated/bunsen_burner5.png" type="Texture" id=18]
+[ext_resource path="res://animated/bunsen_burner11.png" type="Texture" id=19]
+[ext_resource path="res://animated/bunsen_burner13.png" type="Texture" id=20]
+[ext_resource path="res://animated/bunsen_burner4.png" type="Texture" id=21]
+[ext_resource path="res://animated/bunsen_burner15.png" type="Texture" id=22]
+[ext_resource path="res://animated/bunsen_burner17.png" type="Texture" id=23]
+[ext_resource path="res://animated/bunsen_burner6.png" type="Texture" id=24]
+[ext_resource path="res://animated/bunsen_burner8.png" type="Texture" id=25]
+[ext_resource path="res://animated/bunsen_burner12.png" type="Texture" id=26]
+[ext_resource path="res://animated/bunsen_burner0.png" type="Texture" id=27]
+[ext_resource path="res://animated/bunsen_burner1.png" type="Texture" id=28]
+[ext_resource path="res://animated/bunsen_burner2.png" type="Texture" id=29]
+[ext_resource path="res://animated/bunsen_burner3.png" type="Texture" id=30]
+[ext_resource path="res://sound/mouse_click.mp3" type="AudioStream" id=31]
+
+[sub_resource type="SpriteFrames" id=8]
+animations = [ {
+"frames": [ ExtResource( 27 ), ExtResource( 28 ), ExtResource( 29 ), ExtResource( 30 ), ExtResource( 21 ), ExtResource( 18 ), ExtResource( 24 ), ExtResource( 17 ), ExtResource( 25 ), ExtResource( 11 ), ExtResource( 15 ), ExtResource( 19 ), ExtResource( 26 ), ExtResource( 20 ), ExtResource( 12 ), ExtResource( 22 ), ExtResource( 13 ), ExtResource( 23 ), ExtResource( 14 ), ExtResource( 16 ) ],
+"loop": true,
+"name": "fire",
+"speed": 20.0
+} ]
+
+[sub_resource type="DynamicFont" id=2]
+font_data = ExtResource( 7 )
+
+[sub_resource type="StyleBoxEmpty" id=9]
+
+[sub_resource type="StyleBoxEmpty" id=12]
+
+[sub_resource type="StyleBoxEmpty" id=11]
+
+[sub_resource type="DynamicFont" id=7]
+size = 40
+extra_spacing_top = 5
+extra_spacing_bottom = 1
+extra_spacing_space = 1
+font_data = ExtResource( 6 )
+
+[node name="Welcome" type="Control"]
+anchor_right = 1.0
+anchor_bottom = 1.0
+script = ExtResource( 8 )
+__meta__ = {
+"_edit_use_anchors_": false,
+"_edit_vertical_guides_": [ -315.0 ]
+}
+
+[node name="background" type="TextureRect" parent="."]
+modulate = Color( 0.596078, 0.603922, 0.670588, 1 )
+anchor_right = 1.0
+anchor_bottom = 1.0
+texture = ExtResource( 1 )
+expand = true
+stretch_mode = 7
+__meta__ = {
+"_edit_use_anchors_": false
+}
+
+[node name="dia_vk" type="TextureRect" parent="background"]
+anchor_left = 0.360833
+anchor_top = 0.691429
+anchor_right = 0.415833
+anchor_bottom = 0.740286
+margin_left = -3.05176e-05
+margin_right = 534.0
+margin_bottom = 250.8
+rect_scale = Vector2( 0.11, 0.12 )
+texture = ExtResource( 2 )
+__meta__ = {
+"_edit_use_anchors_": true
+}
+
+[node name="dia_mt" type="TextureRect" parent="background"]
+anchor_left = 0.44
+anchor_top = 0.694286
+anchor_right = 0.496
+anchor_bottom = 0.742286
+margin_right = 892.8
+margin_bottom = 446.4
+rect_scale = Vector2( 0.07, 0.07 )
+texture = ExtResource( 3 )
+expand = true
+__meta__ = {
+"_edit_use_anchors_": true
+}
+
+[node name="quecay" type="TextureRect" parent="background"]
+anchor_left = 0.536667
+anchor_top = 0.713626
+anchor_right = 0.631555
+anchor_bottom = 0.713626
+margin_left = 6.10352e-05
+margin_top = 12.4619
+margin_right = 1029.13
+margin_bottom = 87.4619
+rect_rotation = -10.0
+rect_scale = Vector2( 0.1, 0.1 )
+texture = ExtResource( 4 )
+__meta__ = {
+"_edit_use_anchors_": true
+}
+
+[node name="bunsen" type="TextureRect" parent="background"]
+anchor_left = 0.660833
+anchor_top = 0.62
+anchor_right = 0.713542
+anchor_bottom = 0.775714
+margin_right = 189.75
+margin_bottom = 327.0
+rect_scale = Vector2( 0.25, 0.25 )
+texture = ExtResource( 5 )
+__meta__ = {
+"_edit_use_anchors_": true
+}
+
+[node name="animate_fire" type="AnimatedSprite" parent="background"]
+visible = false
+modulate = Color( 0.866667, 0.792157, 0.792157, 1 )
+position = Vector2( 820, 420 )
+scale = Vector2( 0.3, 0.3 )
+frames = SubResource( 8 )
+animation = "fire"
+frame = 16
+
+[node name="but_start" type="ToolButton" parent="."]
+modulate = Color( 1, 0.996078, 0.996078, 1 )
+anchor_left = 0.3375
+anchor_top = 0.598571
+anchor_right = 0.654167
+anchor_bottom = 0.64
+margin_right = -6.10352e-05
+margin_bottom = -1.0
+mouse_filter = 1
+mouse_default_cursor_shape = 2
+custom_colors/font_color = Color( 1, 1, 0.996078, 1 )
+custom_colors/font_color_hover = Color( 0, 0, 0, 1 )
+custom_fonts/font = SubResource( 2 )
+custom_styles/hover = SubResource( 9 )
+custom_styles/pressed = SubResource( 12 )
+custom_styles/normal = SubResource( 11 )
+text = "Nhấn chuột để bắt đầu ..."
+flat = false
+__meta__ = {
+"_edit_use_anchors_": true
+}
+
+[node name="sound" type="AudioStreamPlayer" parent="."]
+stream = ExtResource( 9 )
+
+[node name="sound_click" type="AudioStreamPlayer" parent="."]
+stream = ExtResource( 31 )
+
+[node name="TITLE" type="Label" parent="."]
+anchor_left = 0.0583333
+anchor_top = 0.482857
+anchor_right = 0.948333
+anchor_bottom = 0.564286
+custom_colors/font_color = Color( 0.988235, 0.862745, 0.00392157, 1 )
+custom_colors/font_outline_modulate = Color( 0, 0, 0, 1 )
+custom_colors/font_color_shadow = Color( 0.776471, 0.792157, 0.627451, 1 )
+custom_fonts/font = SubResource( 7 )
+text = "PHÂN LẬP VI SINH VẬT - KỸ THUẬT CẤY RIA"
+align = 1
+__meta__ = {
+"_edit_use_anchors_": true
+}
+
+[node name="logo" type="TextureRect" parent="."]
+anchor_left = 0.00833333
+anchor_top = 0.0171429
+anchor_right = 0.0923917
+anchor_bottom = 0.161243
+margin_left = -5.72205e-05
+margin_top = 9.53674e-07
+margin_right = 1437.39
+margin_bottom = 1422.56
+rect_scale = Vector2( 0.07, 0.07 )
+texture = ExtResource( 10 )
+__meta__ = {
+"_edit_use_anchors_": true
+}
+
+[connection signal="button_up" from="but_start" to="." method="_on_but_start_button_up"]
+[connection signal="mouse_entered" from="but_start" to="." method="_on_but_start_mouse_entered"]

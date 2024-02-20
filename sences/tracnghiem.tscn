@@ -1,0 +1,374 @@
+[gd_scene load_steps=26 format=2]
+
+[ext_resource path="res://fonts/MinionPro-Regular.otf" type="DynamicFontData" id=1]
+[ext_resource path="res://pics/Speaker_ON.png" type="Texture" id=2]
+[ext_resource path="res://pics/Speaker_MUTE.png" type="Texture" id=3]
+[ext_resource path="res://pics/notebook.png" type="Texture" id=4]
+[ext_resource path="res://sound/mouse_click.mp3" type="AudioStream" id=7]
+[ext_resource path="res://sences/tracnghiem.gd" type="Script" id=8]
+[ext_resource path="res://fonts/BeVietnamPro-Bold.ttf" type="DynamicFontData" id=9]
+[ext_resource path="res://pics/nentrang.png" type="Texture" id=11]
+[ext_resource path="res://fonts/BeVietnamPro-Regular.ttf" type="DynamicFontData" id=12]
+[ext_resource path="res://quizz/button_accept-01.png" type="Texture" id=13]
+[ext_resource path="res://quizz/selected.png" type="Texture" id=14]
+[ext_resource path="res://quizz/unselect.png" type="Texture" id=15]
+[ext_resource path="res://quizz/button_accept-02.png" type="Texture" id=16]
+
+[sub_resource type="DynamicFont" id=2]
+size = 18
+extra_spacing_top = 1
+extra_spacing_bottom = 1
+extra_spacing_space = 1
+font_data = ExtResource( 9 )
+
+[sub_resource type="ImageTexture" id=1]
+
+[sub_resource type="DynamicFont" id=15]
+font_data = ExtResource( 9 )
+
+[sub_resource type="DynamicFont" id=16]
+font_data = ExtResource( 9 )
+
+[sub_resource type="DynamicFont" id=17]
+font_data = ExtResource( 9 )
+
+[sub_resource type="DynamicFont" id=10]
+font_data = ExtResource( 1 )
+
+[sub_resource type="DynamicFont" id=5]
+size = 15
+extra_spacing_top = 4
+font_data = ExtResource( 12 )
+
+[sub_resource type="StyleBoxEmpty" id=6]
+
+[sub_resource type="DynamicFont" id=8]
+size = 28
+extra_spacing_top = 7
+extra_spacing_bottom = 1
+extra_spacing_char = 1
+extra_spacing_space = 2
+font_data = ExtResource( 9 )
+
+[sub_resource type="StyleBoxEmpty" id=11]
+
+[sub_resource type="StyleBoxEmpty" id=13]
+
+[sub_resource type="StyleBoxEmpty" id=14]
+
+[node name="tracnghiem" type="TextureRect"]
+margin_left = 211.0
+margin_top = 54.0
+margin_right = 935.0
+margin_bottom = 538.0
+texture = ExtResource( 4 )
+expand = true
+script = ExtResource( 8 )
+__meta__ = {
+"_edit_use_anchors_": false
+}
+
+[node name="vframe_ques" type="VBoxContainer" parent="."]
+margin_left = 19.0
+margin_top = 29.0
+margin_right = 324.0
+margin_bottom = 57.0
+__meta__ = {
+"_edit_use_anchors_": false
+}
+
+[node name="cur_question" type="Label" parent="vframe_ques"]
+margin_right = 305.0
+margin_bottom = 25.0
+custom_colors/font_color = Color( 0, 0, 0, 1 )
+custom_fonts/font = SubResource( 2 )
+text = "Câu hỏi hiện tại"
+align = 3
+valign = 1
+autowrap = true
+__meta__ = {
+"_edit_use_anchors_": false
+}
+
+[node name="img" type="TextureRect" parent="vframe_ques"]
+margin_top = 29.0
+margin_right = 305.0
+margin_bottom = 329.0
+rect_min_size = Vector2( 300, 300 )
+texture = SubResource( 1 )
+expand = true
+stretch_mode = 6
+__meta__ = {
+"_edit_use_anchors_": false
+}
+
+[node name="prev" type="Button" parent="."]
+anchor_top = 1.0
+anchor_bottom = 1.0
+margin_left = 28.0
+margin_top = -64.0
+margin_right = 94.0
+margin_bottom = -24.0
+mouse_default_cursor_shape = 2
+custom_fonts/font = SubResource( 15 )
+text = "Trở lại"
+
+[node name="next" type="Button" parent="."]
+anchor_top = 1.0
+anchor_bottom = 1.0
+margin_left = 118.0
+margin_top = -64.0
+margin_right = 209.0
+margin_bottom = -24.0
+mouse_default_cursor_shape = 2
+custom_fonts/font = SubResource( 16 )
+text = "Tiếp theo"
+
+[node name="finish" type="Button" parent="."]
+anchor_top = 1.0
+anchor_bottom = 1.0
+margin_left = 233.0
+margin_top = -64.0
+margin_right = 314.0
+margin_bottom = -24.0
+mouse_default_cursor_shape = 2
+custom_fonts/font = SubResource( 17 )
+text = "Kết thúc"
+
+[node name="sound_click" type="AudioStreamPlayer" parent="."]
+stream = ExtResource( 7 )
+
+[node name="intro_speaker" type="TextureButton" parent="."]
+visible = false
+margin_left = 13.0
+margin_top = 18.0
+margin_right = 525.0
+margin_bottom = 530.0
+rect_scale = Vector2( 0.07, 0.07 )
+toggle_mode = true
+shortcut_in_tooltip = false
+action_mode = 0
+texture_normal = ExtResource( 3 )
+texture_pressed = ExtResource( 2 )
+__meta__ = {
+"_edit_use_anchors_": false
+}
+
+[node name="details" type="Control" parent="."]
+margin_right = 40.0
+margin_bottom = 40.0
+
+[node name="vframe" type="VBoxContainer" parent="details"]
+margin_left = 404.0
+margin_top = 25.0
+margin_right = 711.0
+margin_bottom = 455.0
+size_flags_vertical = 5
+__meta__ = {
+"_edit_use_anchors_": false
+}
+
+[node name="hframe_a" type="HBoxContainer" parent="details/vframe"]
+margin_right = 307.0
+margin_bottom = 60.0
+rect_pivot_offset = Vector2( 0, 5 )
+
+[node name="check_ansa" type="CheckBox" parent="details/vframe/hframe_a" groups=["group_ans"]]
+margin_right = 28.0
+margin_bottom = 28.0
+mouse_default_cursor_shape = 2
+size_flags_horizontal = 0
+size_flags_vertical = 0
+custom_fonts/font = SubResource( 10 )
+custom_icons/checked = ExtResource( 14 )
+custom_icons/unchecked = ExtResource( 15 )
+__meta__ = {
+"_edit_use_anchors_": false
+}
+
+[node name="lbl_a" type="Label" parent="details/vframe/hframe_a"]
+margin_left = 32.0
+margin_right = 282.0
+margin_bottom = 60.0
+rect_min_size = Vector2( 250, 60 )
+size_flags_horizontal = 0
+size_flags_vertical = 0
+custom_colors/font_color = Color( 0, 0, 0, 1 )
+custom_fonts/font = SubResource( 5 )
+custom_styles/normal = SubResource( 6 )
+align = 3
+autowrap = true
+__meta__ = {
+"_edit_use_anchors_": false
+}
+
+[node name="hframe_b" type="HBoxContainer" parent="details/vframe"]
+margin_top = 64.0
+margin_right = 307.0
+margin_bottom = 124.0
+rect_pivot_offset = Vector2( 0, 5 )
+
+[node name="check_ansb" type="CheckBox" parent="details/vframe/hframe_b" groups=["group_ans"]]
+margin_right = 28.0
+margin_bottom = 28.0
+mouse_default_cursor_shape = 2
+size_flags_horizontal = 0
+size_flags_vertical = 0
+custom_icons/checked = ExtResource( 14 )
+custom_icons/unchecked = ExtResource( 15 )
+__meta__ = {
+"_edit_use_anchors_": false
+}
+
+[node name="lbl_b" type="Label" parent="details/vframe/hframe_b"]
+margin_left = 32.0
+margin_right = 282.0
+margin_bottom = 60.0
+rect_min_size = Vector2( 250, 60 )
+size_flags_horizontal = 0
+size_flags_vertical = 0
+custom_colors/font_color = Color( 0, 0, 0, 1 )
+custom_fonts/font = SubResource( 5 )
+align = 3
+autowrap = true
+__meta__ = {
+"_edit_use_anchors_": false
+}
+
+[node name="hframe_c" type="HBoxContainer" parent="details/vframe"]
+margin_top = 128.0
+margin_right = 307.0
+margin_bottom = 188.0
+rect_pivot_offset = Vector2( 0, 5 )
+
+[node name="check_ansc" type="CheckBox" parent="details/vframe/hframe_c" groups=["group_ans"]]
+margin_right = 28.0
+margin_bottom = 28.0
+mouse_default_cursor_shape = 2
+size_flags_horizontal = 0
+size_flags_vertical = 0
+custom_icons/checked = ExtResource( 14 )
+custom_icons/unchecked = ExtResource( 15 )
+__meta__ = {
+"_edit_use_anchors_": false
+}
+
+[node name="lbl_c" type="Label" parent="details/vframe/hframe_c"]
+margin_left = 32.0
+margin_right = 282.0
+margin_bottom = 60.0
+rect_min_size = Vector2( 250, 60 )
+size_flags_horizontal = 0
+size_flags_vertical = 0
+custom_colors/font_color = Color( 0, 0, 0, 1 )
+custom_fonts/font = SubResource( 5 )
+align = 3
+autowrap = true
+__meta__ = {
+"_edit_use_anchors_": false
+}
+
+[node name="hframe_d" type="HBoxContainer" parent="details/vframe"]
+margin_top = 192.0
+margin_right = 307.0
+margin_bottom = 252.0
+rect_pivot_offset = Vector2( 0, 5 )
+
+[node name="check_ansd" type="CheckBox" parent="details/vframe/hframe_d" groups=["group_ans"]]
+margin_right = 28.0
+margin_bottom = 28.0
+mouse_default_cursor_shape = 2
+size_flags_horizontal = 0
+size_flags_vertical = 0
+custom_icons/checked = ExtResource( 14 )
+custom_icons/unchecked = ExtResource( 15 )
+__meta__ = {
+"_edit_use_anchors_": false
+}
+
+[node name="lbl_d" type="Label" parent="details/vframe/hframe_d"]
+margin_left = 32.0
+margin_right = 282.0
+margin_bottom = 60.0
+rect_min_size = Vector2( 250, 60 )
+size_flags_horizontal = 0
+size_flags_vertical = 0
+custom_colors/font_color = Color( 0, 0, 0, 1 )
+custom_fonts/font = SubResource( 5 )
+align = 3
+autowrap = true
+__meta__ = {
+"_edit_use_anchors_": false
+}
+
+[node name="dialog" type="Control" parent="."]
+visible = false
+margin_left = 121.0
+margin_top = 95.0
+margin_right = 611.0
+margin_bottom = 395.0
+
+[node name="img_dialog" type="TextureRect" parent="dialog"]
+modulate = Color( 0.129412, 0.12549, 0.12549, 1 )
+margin_right = 490.0
+margin_bottom = 300.0
+texture = ExtResource( 11 )
+expand = true
+
+[node name="lbl_dialog" type="Label" parent="dialog"]
+margin_left = 37.0
+margin_top = 23.0
+margin_right = 456.0
+margin_bottom = 214.0
+custom_fonts/font = SubResource( 8 )
+text = "Bạn có muốn kết thúc bài trắc nghiệm kiểm tra kiến thức không?"
+align = 1
+valign = 1
+autowrap = true
+uppercase = true
+__meta__ = {
+"_edit_use_anchors_": false
+}
+
+[node name="yes_dialog" type="Button" parent="dialog"]
+margin_left = 38.0
+margin_top = 220.0
+margin_right = 210.0
+margin_bottom = 285.0
+mouse_default_cursor_shape = 2
+custom_styles/hover = SubResource( 11 )
+custom_styles/focus = SubResource( 13 )
+custom_styles/normal = SubResource( 14 )
+icon = ExtResource( 13 )
+flat = true
+expand_icon = true
+__meta__ = {
+"_edit_use_anchors_": false
+}
+
+[node name="no_dialog" type="Button" parent="dialog"]
+margin_left = 296.0
+margin_top = 219.0
+margin_right = 468.0
+margin_bottom = 284.0
+mouse_default_cursor_shape = 2
+custom_styles/hover = SubResource( 11 )
+custom_styles/focus = SubResource( 13 )
+custom_styles/normal = SubResource( 14 )
+icon = ExtResource( 16 )
+flat = true
+expand_icon = true
+__meta__ = {
+"_edit_use_anchors_": false
+}
+
+[connection signal="pressed" from="prev" to="." method="_on_prev_pressed"]
+[connection signal="pressed" from="next" to="." method="_on_next_pressed"]
+[connection signal="pressed" from="finish" to="." method="_on_finish_pressed"]
+[connection signal="pressed" from="intro_speaker" to="." method="_on_intro_speaker_pressed"]
+[connection signal="toggled" from="details/vframe/hframe_a/check_ansa" to="." method="_on_check_ansa_toggled"]
+[connection signal="toggled" from="details/vframe/hframe_b/check_ansb" to="." method="_on_check_ansb_toggled"]
+[connection signal="toggled" from="details/vframe/hframe_c/check_ansc" to="." method="_on_check_ansc_toggled"]
+[connection signal="toggled" from="details/vframe/hframe_d/check_ansd" to="." method="_on_check_ansd_toggled"]
+[connection signal="pressed" from="dialog/yes_dialog" to="." method="_on_yes_dialog_pressed"]
+[connection signal="pressed" from="dialog/no_dialog" to="." method="_on_no_dialog_pressed"]

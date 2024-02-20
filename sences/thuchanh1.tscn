@@ -1,0 +1,1246 @@
+[gd_scene load_steps=106 format=2]
+
+[ext_resource path="res://pics/background.jpg" type="Texture" id=1]
+[ext_resource path="res://pics/diavk.png" type="Texture" id=2]
+[ext_resource path="res://pics/Denkho.png" type="Texture" id=3]
+[ext_resource path="res://pics/diamt.png" type="Texture" id=4]
+[ext_resource path="res://pics/logo_NTU.png" type="Texture" id=5]
+[ext_resource path="res://sences/thuchanh1.gd" type="Script" id=6]
+[ext_resource path="res://fonts/BeVietnamPro-ExtraLight.ttf" type="DynamicFontData" id=7]
+[ext_resource path="res://loading/Loading.png" type="Texture" id=8]
+[ext_resource path="res://pics/hengio.png" type="Texture" id=9]
+[ext_resource path="res://pics/nentrang.png" type="Texture" id=10]
+[ext_resource path="res://pics/quecay_full.png" type="Texture" id=11]
+[ext_resource path="res://pics/dau_que.png" type="Texture" id=12]
+[ext_resource path="res://pics/close_button.png" type="Texture" id=13]
+[ext_resource path="res://fonts/BeVietnamPro-Bold.ttf" type="DynamicFontData" id=14]
+[ext_resource path="res://sences/but_error.gd" type="Script" id=15]
+[ext_resource path="res://animated/bunsen_burner18.png" type="Texture" id=16]
+[ext_resource path="res://animated/bunsen_burner19.png" type="Texture" id=17]
+[ext_resource path="res://animated/bunsen_burner17.png" type="Texture" id=18]
+[ext_resource path="res://animated/bunsen_burner16.png" type="Texture" id=19]
+[ext_resource path="res://animated/bunsen_burner15.png" type="Texture" id=20]
+[ext_resource path="res://animated/bunsen_burner12.png" type="Texture" id=21]
+[ext_resource path="res://animated/bunsen_burner14.png" type="Texture" id=22]
+[ext_resource path="res://animated/bunsen_burner11.png" type="Texture" id=23]
+[ext_resource path="res://animated/bunsen_burner13.png" type="Texture" id=24]
+[ext_resource path="res://animated/bunsen_burner2.png" type="Texture" id=25]
+[ext_resource path="res://animated/bunsen_burner4.png" type="Texture" id=26]
+[ext_resource path="res://animated/bunsen_burner6.png" type="Texture" id=27]
+[ext_resource path="res://animated/bunsen_burner7.png" type="Texture" id=28]
+[ext_resource path="res://animated/bunsen_burner5.png" type="Texture" id=29]
+[ext_resource path="res://animated/bunsen_burner8.png" type="Texture" id=30]
+[ext_resource path="res://animated/bunsen_burner10.png" type="Texture" id=31]
+[ext_resource path="res://animated/bunsen_burner3.png" type="Texture" id=32]
+[ext_resource path="res://animated/bunsen_burner9.png" type="Texture" id=33]
+[ext_resource path="res://animated/bunsen_burner0.png" type="Texture" id=34]
+[ext_resource path="res://animated/bunsen_burner1.png" type="Texture" id=35]
+[ext_resource path="res://sences/bunsen.gd" type="Script" id=36]
+[ext_resource path="res://pics/vikhuan.png" type="Texture" id=37]
+[ext_resource path="res://sences/quecay.gd" type="Script" id=38]
+[ext_resource path="res://sences/diavk.gd" type="Script" id=39]
+[ext_resource path="res://sences/diamt.gd" type="Script" id=40]
+[ext_resource path="res://pics/nap_diamt.png" type="Texture" id=41]
+[ext_resource path="res://pics/refresh.png" type="Texture" id=42]
+[ext_resource path="res://sences/tucay.tscn" type="PackedScene" id=43]
+[ext_resource path="res://pics/homepage.png" type="Texture" id=44]
+[ext_resource path="res://sound/mouse_click.mp3" type="AudioStream" id=45]
+[ext_resource path="res://bai2/5.png" type="Texture" id=46]
+[ext_resource path="res://bai2/10.png" type="Texture" id=47]
+[ext_resource path="res://bai2/9.png" type="Texture" id=48]
+[ext_resource path="res://bai2/0.png" type="Texture" id=49]
+[ext_resource path="res://bai2/11.png" type="Texture" id=50]
+[ext_resource path="res://bai2/2.png" type="Texture" id=51]
+[ext_resource path="res://bai2/7.png" type="Texture" id=52]
+[ext_resource path="res://bai2/14.png" type="Texture" id=53]
+[ext_resource path="res://bai2/12.png" type="Texture" id=54]
+[ext_resource path="res://bai2/8.png" type="Texture" id=55]
+[ext_resource path="res://bai2/13.png" type="Texture" id=56]
+[ext_resource path="res://bai2/4.png" type="Texture" id=57]
+[ext_resource path="res://bai2/1.png" type="Texture" id=58]
+[ext_resource path="res://bai2/3.png" type="Texture" id=59]
+[ext_resource path="res://bai2/6.png" type="Texture" id=60]
+[ext_resource path="res://fonts/BeVietnamPro-Italic.ttf" type="DynamicFontData" id=61]
+
+[sub_resource type="DynamicFont" id=1]
+font_data = ExtResource( 14 )
+
+[sub_resource type="DynamicFont" id=2]
+size = 19
+font_data = ExtResource( 14 )
+
+[sub_resource type="StyleBoxEmpty" id=35]
+
+[sub_resource type="StyleBoxEmpty" id=36]
+
+[sub_resource type="StyleBoxEmpty" id=37]
+
+[sub_resource type="StyleBoxEmpty" id=3]
+
+[sub_resource type="StyleBoxEmpty" id=4]
+
+[sub_resource type="StyleBoxEmpty" id=32]
+
+[sub_resource type="StyleBoxEmpty" id=33]
+
+[sub_resource type="StyleBoxEmpty" id=34]
+
+[sub_resource type="StyleBoxEmpty" id=38]
+
+[sub_resource type="StyleBoxEmpty" id=22]
+
+[sub_resource type="StyleBoxEmpty" id=39]
+
+[sub_resource type="StyleBoxEmpty" id=5]
+
+[sub_resource type="StyleBoxEmpty" id=6]
+
+[sub_resource type="StreamTexture" id=24]
+flags = 4
+load_path = "res://.import/nap_diamt.png-9b64aa8b4697e3b885851efe3bc21f58.stex"
+
+[sub_resource type="CircleShape2D" id=26]
+radius = 379.042
+
+[sub_resource type="Animation" id=27]
+length = 0.001
+tracks/0/type = "bezier"
+tracks/0/path = NodePath(".:position:x")
+tracks/0/interp = 1
+tracks/0/loop_wrap = true
+tracks/0/imported = false
+tracks/0/enabled = true
+tracks/0/keys = {
+"points": PoolRealArray( 190, -0.25, 0, 0.25, 0 ),
+"times": PoolRealArray( 0 )
+}
+tracks/1/type = "bezier"
+tracks/1/path = NodePath(".:position:y")
+tracks/1/interp = 1
+tracks/1/loop_wrap = true
+tracks/1/imported = false
+tracks/1/enabled = true
+tracks/1/keys = {
+"points": PoolRealArray( 491, -0.25, 0, 0.25, 0 ),
+"times": PoolRealArray( 0 )
+}
+
+[sub_resource type="Animation" id=28]
+resource_name = "run"
+tracks/0/type = "bezier"
+tracks/0/path = NodePath(".:position:x")
+tracks/0/interp = 1
+tracks/0/loop_wrap = true
+tracks/0/imported = false
+tracks/0/enabled = true
+tracks/0/keys = {
+"points": PoolRealArray( 190, -0.25, 0, 0.25, 0, 190, -0.25, 0, 0.25, 0 ),
+"times": PoolRealArray( 0, 1 )
+}
+tracks/1/type = "bezier"
+tracks/1/path = NodePath(".:position:y")
+tracks/1/interp = 1
+tracks/1/loop_wrap = true
+tracks/1/imported = false
+tracks/1/enabled = true
+tracks/1/keys = {
+"points": PoolRealArray( 491, -0.25, 0, 0.25, 0, 900, -0.25, 0, 0.25, 0 ),
+"times": PoolRealArray( 0, 1 )
+}
+
+[sub_resource type="Animation" id=30]
+length = 0.001
+tracks/0/type = "bezier"
+tracks/0/path = NodePath(".:position:x")
+tracks/0/interp = 1
+tracks/0/loop_wrap = true
+tracks/0/imported = false
+tracks/0/enabled = true
+tracks/0/keys = {
+"points": PoolRealArray( 664, -0.25, 0, 0.25, 0 ),
+"times": PoolRealArray( 0 )
+}
+tracks/1/type = "bezier"
+tracks/1/path = NodePath(".:position:y")
+tracks/1/interp = 1
+tracks/1/loop_wrap = true
+tracks/1/imported = false
+tracks/1/enabled = true
+tracks/1/keys = {
+"points": PoolRealArray( 491, -0.25, 0, 0.25, 0 ),
+"times": PoolRealArray( 0 )
+}
+
+[sub_resource type="Animation" id=31]
+resource_name = "run"
+tracks/0/type = "bezier"
+tracks/0/path = NodePath(".:position:x")
+tracks/0/interp = 1
+tracks/0/loop_wrap = true
+tracks/0/imported = false
+tracks/0/enabled = true
+tracks/0/keys = {
+"points": PoolRealArray( 664, -0.25, 0, 0.25, 0, 664, -0.25, 0, 0.25, 0 ),
+"times": PoolRealArray( 0, 1 )
+}
+tracks/1/type = "bezier"
+tracks/1/path = NodePath(".:position:y")
+tracks/1/interp = 1
+tracks/1/loop_wrap = true
+tracks/1/imported = false
+tracks/1/enabled = true
+tracks/1/keys = {
+"points": PoolRealArray( 491, -0.25, 0, 0.25, 0, 900, -0.25, 0, 0.25, 0 ),
+"times": PoolRealArray( 0, 1 )
+}
+
+[sub_resource type="SpriteFrames" id=25]
+animations = [ {
+"frames": [ ExtResource( 49 ), ExtResource( 58 ), ExtResource( 51 ), ExtResource( 59 ), ExtResource( 57 ), ExtResource( 46 ), ExtResource( 60 ), ExtResource( 52 ), ExtResource( 55 ), ExtResource( 48 ), ExtResource( 47 ), ExtResource( 50 ), ExtResource( 54 ), ExtResource( 56 ), ExtResource( 53 ) ],
+"loop": true,
+"name": "click",
+"speed": 10.0
+} ]
+
+[sub_resource type="StyleBoxEmpty" id=12]
+
+[sub_resource type="StyleBoxEmpty" id=13]
+
+[sub_resource type="StyleBoxEmpty" id=14]
+
+[sub_resource type="StyleBoxEmpty" id=15]
+
+[sub_resource type="SpriteFrames" id=16]
+animations = [ {
+"frames": [ ExtResource( 34 ), ExtResource( 35 ), ExtResource( 25 ), ExtResource( 32 ), ExtResource( 26 ), ExtResource( 29 ), ExtResource( 27 ), ExtResource( 28 ), ExtResource( 30 ), ExtResource( 33 ), ExtResource( 31 ), ExtResource( 23 ), ExtResource( 21 ), ExtResource( 24 ), ExtResource( 22 ), ExtResource( 20 ), ExtResource( 19 ), ExtResource( 18 ), ExtResource( 16 ), ExtResource( 17 ) ],
+"loop": true,
+"name": "fire",
+"speed": 20.0
+} ]
+
+[sub_resource type="Animation" id=7]
+length = 0.001
+tracks/0/type = "bezier"
+tracks/0/path = NodePath("quecay:position:x")
+tracks/0/interp = 1
+tracks/0/loop_wrap = true
+tracks/0/imported = false
+tracks/0/enabled = true
+tracks/0/keys = {
+"points": PoolRealArray( 255, -0.25, 0, 0.25, 0 ),
+"times": PoolRealArray( 0 )
+}
+tracks/1/type = "bezier"
+tracks/1/path = NodePath("quecay:position:y")
+tracks/1/interp = 1
+tracks/1/loop_wrap = true
+tracks/1/imported = false
+tracks/1/enabled = true
+tracks/1/keys = {
+"points": PoolRealArray( 224, -0.25, 0, 0.25, 0 ),
+"times": PoolRealArray( 0 )
+}
+tracks/2/type = "bezier"
+tracks/2/path = NodePath("quecay:rotation_degrees")
+tracks/2/interp = 1
+tracks/2/loop_wrap = true
+tracks/2/imported = false
+tracks/2/enabled = true
+tracks/2/keys = {
+"points": PoolRealArray( 0, -0.25, 0, 0.25, 0 ),
+"times": PoolRealArray( 0 )
+}
+tracks/3/type = "bezier"
+tracks/3/path = NodePath("diavk:position:x")
+tracks/3/interp = 1
+tracks/3/loop_wrap = true
+tracks/3/imported = false
+tracks/3/enabled = true
+tracks/3/keys = {
+"points": PoolRealArray( 191, -0.25, 0, 0.25, 0 ),
+"times": PoolRealArray( 0 )
+}
+tracks/4/type = "bezier"
+tracks/4/path = NodePath("diavk:position:y")
+tracks/4/interp = 1
+tracks/4/loop_wrap = true
+tracks/4/imported = false
+tracks/4/enabled = true
+tracks/4/keys = {
+"points": PoolRealArray( 491, -0.25, 0, 0.25, 0 ),
+"times": PoolRealArray( 0 )
+}
+tracks/5/type = "bezier"
+tracks/5/path = NodePath("diavk:rotation_degrees")
+tracks/5/interp = 1
+tracks/5/loop_wrap = true
+tracks/5/imported = false
+tracks/5/enabled = true
+tracks/5/keys = {
+"points": PoolRealArray( 0, -0.25, 0, 0.25, 0 ),
+"times": PoolRealArray( 0 )
+}
+tracks/6/type = "bezier"
+tracks/6/path = NodePath("diamt:position:x")
+tracks/6/interp = 1
+tracks/6/loop_wrap = true
+tracks/6/imported = false
+tracks/6/enabled = true
+tracks/6/keys = {
+"points": PoolRealArray( 661, -0.25, 0, 0.25, 0 ),
+"times": PoolRealArray( 0 )
+}
+tracks/7/type = "bezier"
+tracks/7/path = NodePath("diamt:position:y")
+tracks/7/interp = 1
+tracks/7/loop_wrap = true
+tracks/7/imported = false
+tracks/7/enabled = true
+tracks/7/keys = {
+"points": PoolRealArray( 490, -0.25, 0, 0.25, 0 ),
+"times": PoolRealArray( 0 )
+}
+tracks/8/type = "bezier"
+tracks/8/path = NodePath("diamt:rotation_degrees")
+tracks/8/interp = 1
+tracks/8/loop_wrap = true
+tracks/8/imported = false
+tracks/8/enabled = true
+tracks/8/keys = {
+"points": PoolRealArray( 0, -0.25, 0, 0.25, 0 ),
+"times": PoolRealArray( 0 )
+}
+tracks/9/type = "bezier"
+tracks/9/path = NodePath("bunsen:position:x")
+tracks/9/interp = 1
+tracks/9/loop_wrap = true
+tracks/9/imported = false
+tracks/9/enabled = true
+tracks/9/keys = {
+"points": PoolRealArray( 1102, -0.25, 0, 0.25, 0 ),
+"times": PoolRealArray( 0 )
+}
+tracks/10/type = "bezier"
+tracks/10/path = NodePath("bunsen:position:y")
+tracks/10/interp = 1
+tracks/10/loop_wrap = true
+tracks/10/imported = false
+tracks/10/enabled = true
+tracks/10/keys = {
+"points": PoolRealArray( 493, -0.25, 0, 0.25, 0 ),
+"times": PoolRealArray( 0 )
+}
+tracks/11/type = "bezier"
+tracks/11/path = NodePath("bunsen:rotation_degrees")
+tracks/11/interp = 1
+tracks/11/loop_wrap = true
+tracks/11/imported = false
+tracks/11/enabled = true
+tracks/11/keys = {
+"points": PoolRealArray( 0, -0.25, 0, 0.25, 0 ),
+"times": PoolRealArray( 0 )
+}
+tracks/12/type = "value"
+tracks/12/path = NodePath("nap_vikhuan:position")
+tracks/12/interp = 1
+tracks/12/loop_wrap = true
+tracks/12/imported = false
+tracks/12/enabled = true
+tracks/12/keys = {
+"times": PoolRealArray( 0 ),
+"transitions": PoolRealArray( 1 ),
+"update": 0,
+"values": [ Vector2( 190, 494 ) ]
+}
+tracks/13/type = "value"
+tracks/13/path = NodePath("nap_mt:position")
+tracks/13/interp = 1
+tracks/13/loop_wrap = true
+tracks/13/imported = false
+tracks/13/enabled = true
+tracks/13/keys = {
+"times": PoolRealArray( 0 ),
+"transitions": PoolRealArray( 1 ),
+"update": 0,
+"values": [ Vector2( 664, 491 ) ]
+}
+
+[sub_resource type="Animation" id=8]
+resource_name = "fadein"
+tracks/0/type = "bezier"
+tracks/0/path = NodePath("quecay:position:x")
+tracks/0/interp = 1
+tracks/0/loop_wrap = true
+tracks/0/imported = false
+tracks/0/enabled = true
+tracks/0/keys = {
+"points": PoolRealArray( 255, -0.25, 0, 0.25, 0, 255, -0.25, 0, 0.25, 0 ),
+"times": PoolRealArray( 0, 1 )
+}
+tracks/1/type = "bezier"
+tracks/1/path = NodePath("quecay:position:y")
+tracks/1/interp = 1
+tracks/1/loop_wrap = true
+tracks/1/imported = false
+tracks/1/enabled = true
+tracks/1/keys = {
+"points": PoolRealArray( 800, -0.25, 0, 0.25, 0, 224, -0.25, 0, 0.25, 0 ),
+"times": PoolRealArray( 0, 1 )
+}
+tracks/2/type = "bezier"
+tracks/2/path = NodePath("quecay:rotation_degrees")
+tracks/2/interp = 1
+tracks/2/loop_wrap = true
+tracks/2/imported = false
+tracks/2/enabled = true
+tracks/2/keys = {
+"points": PoolRealArray( 0, -0.25, 0, 0.25, 0, 0, -0.25, 0, 0.25, 0 ),
+"times": PoolRealArray( 0, 1 )
+}
+tracks/3/type = "bezier"
+tracks/3/path = NodePath("diavk:position:x")
+tracks/3/interp = 1
+tracks/3/loop_wrap = true
+tracks/3/imported = false
+tracks/3/enabled = true
+tracks/3/keys = {
+"points": PoolRealArray( 191, -0.25, 0, 0.25, 0, 191, -0.25, 0, 0.25, 0 ),
+"times": PoolRealArray( 0, 1 )
+}
+tracks/4/type = "bezier"
+tracks/4/path = NodePath("diavk:position:y")
+tracks/4/interp = 1
+tracks/4/loop_wrap = true
+tracks/4/imported = false
+tracks/4/enabled = true
+tracks/4/keys = {
+"points": PoolRealArray( 900, -0.25, 0, 0.25, 0, 491, -0.25, 0, 0.25, 0 ),
+"times": PoolRealArray( 0.6, 1 )
+}
+tracks/5/type = "bezier"
+tracks/5/path = NodePath("diavk:rotation_degrees")
+tracks/5/interp = 1
+tracks/5/loop_wrap = true
+tracks/5/imported = false
+tracks/5/enabled = true
+tracks/5/keys = {
+"points": PoolRealArray( 0, -0.25, 0, 0.25, 0, 0, -0.25, 0, 0.25, 0 ),
+"times": PoolRealArray( 0, 1 )
+}
+tracks/6/type = "bezier"
+tracks/6/path = NodePath("diamt:position:x")
+tracks/6/interp = 1
+tracks/6/loop_wrap = true
+tracks/6/imported = false
+tracks/6/enabled = true
+tracks/6/keys = {
+"points": PoolRealArray( 661, -0.25, 0, 0.25, 0, 661, -0.25, 0, 0.25, 0 ),
+"times": PoolRealArray( 0, 1 )
+}
+tracks/7/type = "bezier"
+tracks/7/path = NodePath("diamt:position:y")
+tracks/7/interp = 1
+tracks/7/loop_wrap = true
+tracks/7/imported = false
+tracks/7/enabled = true
+tracks/7/keys = {
+"points": PoolRealArray( 900, -0.25, 0, 0.25, 0, 490, -0.25, 0, 0.25, 0 ),
+"times": PoolRealArray( 0.4, 1 )
+}
+tracks/8/type = "bezier"
+tracks/8/path = NodePath("diamt:rotation_degrees")
+tracks/8/interp = 1
+tracks/8/loop_wrap = true
+tracks/8/imported = false
+tracks/8/enabled = true
+tracks/8/keys = {
+"points": PoolRealArray( 0, -0.25, 0, 0.25, 0, 0, -0.25, 0, 0.25, 0 ),
+"times": PoolRealArray( 0, 1 )
+}
+tracks/9/type = "bezier"
+tracks/9/path = NodePath("bunsen:position:x")
+tracks/9/interp = 1
+tracks/9/loop_wrap = true
+tracks/9/imported = false
+tracks/9/enabled = true
+tracks/9/keys = {
+"points": PoolRealArray( 1102, -0.25, 0, 0.25, 0, 1102, -0.25, 0, 0.25, 0 ),
+"times": PoolRealArray( 0, 1 )
+}
+tracks/10/type = "bezier"
+tracks/10/path = NodePath("bunsen:position:y")
+tracks/10/interp = 1
+tracks/10/loop_wrap = true
+tracks/10/imported = false
+tracks/10/enabled = true
+tracks/10/keys = {
+"points": PoolRealArray( 900, -0.25, 0, 0.25, 0, 493, -0.25, 0, 0.25, 0 ),
+"times": PoolRealArray( 0.2, 1 )
+}
+tracks/11/type = "bezier"
+tracks/11/path = NodePath("bunsen:rotation_degrees")
+tracks/11/interp = 1
+tracks/11/loop_wrap = true
+tracks/11/imported = false
+tracks/11/enabled = true
+tracks/11/keys = {
+"points": PoolRealArray( 0, -0.25, 0, 0.25, 0, 0, -0.25, 0, 0.25, 0 ),
+"times": PoolRealArray( 0, 1 )
+}
+tracks/12/type = "value"
+tracks/12/path = NodePath("nap_vikhuan:position")
+tracks/12/interp = 1
+tracks/12/loop_wrap = true
+tracks/12/imported = false
+tracks/12/enabled = true
+tracks/12/keys = {
+"times": PoolRealArray( 0.6, 1 ),
+"transitions": PoolRealArray( 1, 1 ),
+"update": 0,
+"values": [ Vector2( 190, 900 ), Vector2( 190, 491 ) ]
+}
+tracks/13/type = "value"
+tracks/13/path = NodePath("nap_mt:position")
+tracks/13/interp = 1
+tracks/13/loop_wrap = true
+tracks/13/imported = false
+tracks/13/enabled = true
+tracks/13/keys = {
+"times": PoolRealArray( 0.6, 1 ),
+"transitions": PoolRealArray( 1, 1 ),
+"update": 0,
+"values": [ Vector2( 664, 900 ), Vector2( 664, 491 ) ]
+}
+
+[sub_resource type="DynamicFont" id=9]
+size = 18
+font_data = ExtResource( 61 )
+
+[sub_resource type="StyleBoxFlat" id=43]
+bg_color = Color( 0.054902, 0.321569, 0.792157, 1 )
+
+[sub_resource type="StyleBoxEmpty" id=41]
+
+[sub_resource type="StyleBoxFlat" id=42]
+bg_color = Color( 0, 0.505882, 0.819608, 1 )
+
+[sub_resource type="CapsuleShape2D" id=29]
+
+[sub_resource type="Shader" id=10]
+code = "shader_type canvas_item;
+
+uniform vec4 line_color : hint_color = vec4(1.0);
+uniform float line_thickness : hint_range(0, 10) = 1.0;
+uniform bool click = false;
+
+const vec2 OFFSETS[8] = {
+	vec2(-1, -1), vec2(-1, 0), vec2(-1, 1), vec2(0, -1), vec2(0, 1), 
+	vec2(1, -1), vec2(1, 0), vec2(1, 1)
+};
+
+void fragment() {
+	vec2 size = TEXTURE_PIXEL_SIZE * line_thickness;
+	float outline = 1.0;
+	
+	for (int i = 0; i < OFFSETS.length(); i++) {
+		outline *= texture(TEXTURE, UV + size * OFFSETS[i]).a;
+	}
+	outline = 1.0 - outline;
+	
+	vec4 color = texture(TEXTURE, UV);
+	vec4 outlined_result = mix(color, line_color, outline * color.a);
+	if (click==true){
+		COLOR = mix(color, outlined_result, outlined_result.a);
+	}
+	else{
+		outlined_result = mix(color, vec4(0,0,0,1), outline * color.a);
+		COLOR = mix(color, outlined_result, outlined_result.a);
+	}
+}"
+
+[sub_resource type="ShaderMaterial" id=11]
+shader = SubResource( 10 )
+shader_param/line_color = Color( 1, 0, 0, 1 )
+shader_param/line_thickness = 3.0
+shader_param/click = false
+
+[sub_resource type="CircleShape2D" id=18]
+radius = 33.7062
+
+[sub_resource type="Animation" id=19]
+length = 0.001
+tracks/0/type = "bezier"
+tracks/0/path = NodePath("diavk:position:x")
+tracks/0/interp = 1
+tracks/0/loop_wrap = true
+tracks/0/imported = false
+tracks/0/enabled = true
+tracks/0/keys = {
+"points": PoolRealArray( 191, -0.25, 0, 0.25, 0 ),
+"times": PoolRealArray( 0 )
+}
+tracks/1/type = "bezier"
+tracks/1/path = NodePath("diavk:position:y")
+tracks/1/interp = 1
+tracks/1/loop_wrap = true
+tracks/1/imported = false
+tracks/1/enabled = true
+tracks/1/keys = {
+"points": PoolRealArray( 491, -0.25, 0, 0.25, 0 ),
+"times": PoolRealArray( 0 )
+}
+tracks/2/type = "bezier"
+tracks/2/path = NodePath("diavk:rotation_degrees")
+tracks/2/interp = 1
+tracks/2/loop_wrap = true
+tracks/2/imported = false
+tracks/2/enabled = true
+tracks/2/keys = {
+"points": PoolRealArray( 0, -0.25, 0, 0.25, 0 ),
+"times": PoolRealArray( 0 )
+}
+tracks/3/type = "bezier"
+tracks/3/path = NodePath("quecay:position:x")
+tracks/3/interp = 1
+tracks/3/loop_wrap = true
+tracks/3/imported = false
+tracks/3/enabled = true
+tracks/3/keys = {
+"points": PoolRealArray( 255, -0.25, 0, 0.25, 0 ),
+"times": PoolRealArray( 0 )
+}
+tracks/4/type = "bezier"
+tracks/4/path = NodePath("quecay:position:y")
+tracks/4/interp = 1
+tracks/4/loop_wrap = true
+tracks/4/imported = false
+tracks/4/enabled = true
+tracks/4/keys = {
+"points": PoolRealArray( 224, -0.25, 0, 0.25, 0 ),
+"times": PoolRealArray( 0 )
+}
+tracks/5/type = "bezier"
+tracks/5/path = NodePath("quecay:rotation_degrees")
+tracks/5/interp = 1
+tracks/5/loop_wrap = true
+tracks/5/imported = false
+tracks/5/enabled = true
+tracks/5/keys = {
+"points": PoolRealArray( 0, -0.25, 0, 0.25, 0 ),
+"times": PoolRealArray( 0 )
+}
+tracks/6/type = "bezier"
+tracks/6/path = NodePath("bunsen:position:x")
+tracks/6/interp = 1
+tracks/6/loop_wrap = true
+tracks/6/imported = false
+tracks/6/enabled = true
+tracks/6/keys = {
+"points": PoolRealArray( 1102, -0.25, 0, 0.25, 0 ),
+"times": PoolRealArray( 0 )
+}
+tracks/7/type = "bezier"
+tracks/7/path = NodePath("bunsen:position:y")
+tracks/7/interp = 1
+tracks/7/loop_wrap = true
+tracks/7/imported = false
+tracks/7/enabled = true
+tracks/7/keys = {
+"points": PoolRealArray( 493, -0.25, 0, 0.25, 0 ),
+"times": PoolRealArray( 0 )
+}
+tracks/8/type = "bezier"
+tracks/8/path = NodePath("bunsen:rotation_degrees")
+tracks/8/interp = 1
+tracks/8/loop_wrap = true
+tracks/8/imported = false
+tracks/8/enabled = true
+tracks/8/keys = {
+"points": PoolRealArray( 0, -0.25, 0, 0.25, 0 ),
+"times": PoolRealArray( 0 )
+}
+
+[sub_resource type="Animation" id=20]
+resource_name = "fadeout"
+tracks/0/type = "bezier"
+tracks/0/path = NodePath("diavk:position:x")
+tracks/0/interp = 1
+tracks/0/loop_wrap = true
+tracks/0/imported = false
+tracks/0/enabled = false
+tracks/0/keys = {
+"points": PoolRealArray( 191, -0.25, 0, 0.25, 0, 191, -0.25, 0, 0.25, 0 ),
+"times": PoolRealArray( 0, 1 )
+}
+tracks/1/type = "bezier"
+tracks/1/path = NodePath("diavk:position:y")
+tracks/1/interp = 1
+tracks/1/loop_wrap = true
+tracks/1/imported = false
+tracks/1/enabled = false
+tracks/1/keys = {
+"points": PoolRealArray( 491, -0.25, 0, 0.25, 0, 900, -0.25, 0, 0.25, 0 ),
+"times": PoolRealArray( 0, 1 )
+}
+tracks/2/type = "bezier"
+tracks/2/path = NodePath("diavk:rotation_degrees")
+tracks/2/interp = 1
+tracks/2/loop_wrap = true
+tracks/2/imported = false
+tracks/2/enabled = false
+tracks/2/keys = {
+"points": PoolRealArray( 0, -0.25, 0, 0.25, 0, 0, -0.25, 0, 0.25, 0 ),
+"times": PoolRealArray( 0, 1 )
+}
+tracks/3/type = "bezier"
+tracks/3/path = NodePath("quecay:position:x")
+tracks/3/interp = 1
+tracks/3/loop_wrap = true
+tracks/3/imported = false
+tracks/3/enabled = true
+tracks/3/keys = {
+"points": PoolRealArray( 255, -0.25, 0, 0.25, 0, 255, -0.25, 0, 0.25, 0 ),
+"times": PoolRealArray( 0, 1 )
+}
+tracks/4/type = "bezier"
+tracks/4/path = NodePath("quecay:position:y")
+tracks/4/interp = 1
+tracks/4/loop_wrap = true
+tracks/4/imported = false
+tracks/4/enabled = true
+tracks/4/keys = {
+"points": PoolRealArray( 224, -0.25, 0, 0.25, 0, 800, -0.25, 0, 0.25, 0 ),
+"times": PoolRealArray( 0, 1 )
+}
+tracks/5/type = "bezier"
+tracks/5/path = NodePath("quecay:rotation_degrees")
+tracks/5/interp = 1
+tracks/5/loop_wrap = true
+tracks/5/imported = false
+tracks/5/enabled = true
+tracks/5/keys = {
+"points": PoolRealArray( 0, -0.25, 0, 0.25, 0, 0, -0.25, 0, 0.25, 0 ),
+"times": PoolRealArray( 0, 1 )
+}
+tracks/6/type = "bezier"
+tracks/6/path = NodePath("bunsen:position:x")
+tracks/6/interp = 1
+tracks/6/loop_wrap = true
+tracks/6/imported = false
+tracks/6/enabled = false
+tracks/6/keys = {
+"points": PoolRealArray( 1102, -0.25, 0, 0.25, 0, 1102, -0.25, 0, 0.25, 0 ),
+"times": PoolRealArray( 0, 1 )
+}
+tracks/7/type = "bezier"
+tracks/7/path = NodePath("bunsen:position:y")
+tracks/7/interp = 1
+tracks/7/loop_wrap = true
+tracks/7/imported = false
+tracks/7/enabled = false
+tracks/7/keys = {
+"points": PoolRealArray( 493, -0.25, 0, 0.25, 0, 1000, -0.25, 0, 0.25, 0 ),
+"times": PoolRealArray( 0, 1 )
+}
+tracks/8/type = "bezier"
+tracks/8/path = NodePath("bunsen:rotation_degrees")
+tracks/8/interp = 1
+tracks/8/loop_wrap = true
+tracks/8/imported = false
+tracks/8/enabled = false
+tracks/8/keys = {
+"points": PoolRealArray( 0, -0.25, 0, 0.25, 0, 0, -0.25, 0, 0.25, 0 ),
+"times": PoolRealArray( 0, 1 )
+}
+
+[sub_resource type="Animation" id=47]
+length = 0.001
+
+[sub_resource type="Animation" id=21]
+resource_name = "run"
+length = 1.5
+tracks/0/type = "bezier"
+tracks/0/path = NodePath(".:position:x")
+tracks/0/interp = 1
+tracks/0/loop_wrap = true
+tracks/0/imported = false
+tracks/0/enabled = true
+tracks/0/keys = {
+"points": PoolRealArray( 1000, -0.25, 0, 0.25, 0, 1000, -0.25, 0, 0.25, 0, 661, -0.25, 0, 0.25, 0, 661, -0.25, 0, 0.25, 0 ),
+"times": PoolRealArray( 0, 0.4, 1.3, 1.4 )
+}
+tracks/1/type = "value"
+tracks/1/path = NodePath(".:scale:x")
+tracks/1/interp = 1
+tracks/1/loop_wrap = true
+tracks/1/imported = false
+tracks/1/enabled = true
+tracks/1/keys = {
+"times": PoolRealArray( 0, 0.4, 1.3, 1.4 ),
+"transitions": PoolRealArray( 1, 1, 1, 1 ),
+"update": 0,
+"values": [ 0.33, 0.33, 0.33, 0.325 ]
+}
+tracks/2/type = "value"
+tracks/2/path = NodePath(".:scale:y")
+tracks/2/interp = 1
+tracks/2/loop_wrap = true
+tracks/2/imported = false
+tracks/2/enabled = true
+tracks/2/keys = {
+"times": PoolRealArray( 0, 0.4, 1.3, 1.4 ),
+"transitions": PoolRealArray( 1, 1, 1, 1 ),
+"update": 0,
+"values": [ 0.36, 0.36, 0.36, 0.351 ]
+}
+
+[sub_resource type="DynamicFont" id=44]
+size = 31
+font_data = ExtResource( 7 )
+
+[sub_resource type="Animation" id=45]
+length = 0.001
+tracks/0/type = "value"
+tracks/0/path = NodePath("txt_loading:percent_visible")
+tracks/0/interp = 1
+tracks/0/loop_wrap = true
+tracks/0/imported = false
+tracks/0/enabled = true
+tracks/0/keys = {
+"times": PoolRealArray( 0 ),
+"transitions": PoolRealArray( 1 ),
+"update": 0,
+"values": [ 1.0 ]
+}
+tracks/1/type = "value"
+tracks/1/path = NodePath("../but_finish:visible")
+tracks/1/interp = 1
+tracks/1/loop_wrap = true
+tracks/1/imported = false
+tracks/1/enabled = true
+tracks/1/keys = {
+"times": PoolRealArray( 0 ),
+"transitions": PoolRealArray( 1 ),
+"update": 0,
+"values": [ false ]
+}
+
+[sub_resource type="Animation" id=46]
+resource_name = "run"
+tracks/0/type = "value"
+tracks/0/path = NodePath("txt_loading:percent_visible")
+tracks/0/interp = 1
+tracks/0/loop_wrap = true
+tracks/0/imported = false
+tracks/0/enabled = true
+tracks/0/keys = {
+"times": PoolRealArray( 0, 1 ),
+"transitions": PoolRealArray( 1, 1 ),
+"update": 0,
+"values": [ 0.0, 1.0 ]
+}
+
+[node name="thuchanh1" type="Node2D"]
+script = ExtResource( 6 )
+
+[node name="background" type="Sprite" parent="."]
+position = Vector2( 0.385692, -0.0706921 )
+scale = Vector2( 0.22076, 0.190515 )
+texture = ExtResource( 1 )
+offset = Vector2( 2738.78, 1840.12 )
+
+[node name="nen_menu" type="TextureRect" parent="."]
+visible = false
+modulate = Color( 0.25098, 0.239216, 0.239216, 1 )
+margin_left = 1.0
+margin_right = 1196.0
+margin_bottom = 80.0
+texture = ExtResource( 10 )
+expand = true
+__meta__ = {
+"_edit_use_anchors_": false
+}
+
+[node name="logo" type="TextureRect" parent="."]
+margin_left = 30.0
+margin_top = 4.0
+margin_right = 110.0
+margin_bottom = 84.0
+texture = ExtResource( 5 )
+expand = true
+__meta__ = {
+"_edit_use_anchors_": false
+}
+
+[node name="lbl_hoten" type="Label" parent="."]
+modulate = Color( 0.407843, 0.392157, 0.392157, 1 )
+margin_left = 112.0
+margin_top = 3.0
+margin_right = 586.0
+margin_bottom = 83.0
+custom_colors/font_color = Color( 0, 0, 0, 1 )
+custom_fonts/font = SubResource( 1 )
+align = 1
+valign = 1
+uppercase = true
+__meta__ = {
+"_edit_use_anchors_": false
+}
+
+[node name="but_refresh" type="Button" parent="."]
+margin_left = 1107.0
+margin_top = 3.0
+margin_right = 1187.0
+margin_bottom = 83.0
+mouse_default_cursor_shape = 2
+custom_fonts/font = SubResource( 2 )
+custom_styles/hover = SubResource( 35 )
+custom_styles/pressed = SubResource( 36 )
+custom_styles/focus = SubResource( 37 )
+custom_styles/disabled = SubResource( 3 )
+custom_styles/normal = SubResource( 4 )
+icon = ExtResource( 42 )
+expand_icon = true
+__meta__ = {
+"_edit_use_anchors_": false
+}
+
+[node name="but_homepage" type="Button" parent="."]
+margin_left = 1019.0
+margin_top = 6.0
+margin_right = 1099.0
+margin_bottom = 86.0
+mouse_default_cursor_shape = 2
+custom_fonts/font = SubResource( 2 )
+custom_styles/hover = SubResource( 32 )
+custom_styles/pressed = SubResource( 33 )
+custom_styles/focus = SubResource( 34 )
+custom_styles/disabled = SubResource( 3 )
+custom_styles/normal = SubResource( 4 )
+icon = ExtResource( 44 )
+expand_icon = true
+__meta__ = {
+"_edit_use_anchors_": false
+}
+
+[node name="but_hengio" type="Button" parent="."]
+visible = false
+margin_left = 934.0
+margin_top = 3.0
+margin_right = 1014.0
+margin_bottom = 83.0
+mouse_default_cursor_shape = 2
+custom_fonts/font = SubResource( 2 )
+custom_styles/hover = SubResource( 38 )
+custom_styles/pressed = SubResource( 22 )
+custom_styles/focus = SubResource( 39 )
+custom_styles/disabled = SubResource( 5 )
+custom_styles/normal = SubResource( 6 )
+disabled = true
+icon = ExtResource( 9 )
+expand_icon = true
+__meta__ = {
+"_edit_use_anchors_": false
+}
+
+[node name="diavk" type="Sprite" parent="."]
+position = Vector2( 191, 491 )
+scale = Vector2( 0.5, 0.5 )
+texture = ExtResource( 2 )
+script = ExtResource( 39 )
+
+[node name="ar_ngoaibien" type="Area2D" parent="diavk"]
+
+[node name="co_ngoaibien" type="CollisionPolygon2D" parent="diavk/ar_ngoaibien"]
+polygon = PoolVector2Array( -52, 252, -32, 258, -22, 246, -134, 2, -28, -120, 90, -88, 112, -88, 104, -72, 112, -60, 128, -64, 132, -70, 146, 0, 118, 12, 128, 38, 108, 54, 120, 84, 142, 92, 154, 82, 138, 148, 160, 160, 172, 144, 184, 210, 218, 208, 278, 132, 240, -104, 262, -102, 260, -124, 210, -178, 168, -210, 2, -250, -60, -252, -250, -100, -262, -78, -250, -12, -250, 8, -244, 12, -174, 218, -148, 230, -112, 248, -78, 240 )
+
+[node name="ar_khuanlac1" type="Area2D" parent="diavk"]
+
+[node name="co_khuanlac1" type="CollisionPolygon2D" parent="diavk/ar_khuanlac1"]
+polygon = PoolVector2Array( -6, 40, 14, 40, 14, 26, 14, 18, 26, 16, 38, 20, 52, 8, 54, -6, 38, -16, 30, -10, 22, -18, 14, -30, -4, -24, -10, -10, -8, 2, -18, 10, -22, 28 )
+
+[node name="co_khuanlac2" type="CollisionPolygon2D" parent="diavk/ar_khuanlac1"]
+polygon = PoolVector2Array( -16, 116, 2, 108, 0, 86, 12, 70, 30, 62, 66, 56, 76, 82, 54, 94, 30, 100, 26, 122, 6, 144, -20, 138 )
+
+[node name="nap_vikhuan" type="Sprite" parent="."]
+modulate = Color( 0.968627, 0.929412, 0.929412, 1 )
+use_parent_material = true
+position = Vector2( 190, 494 )
+scale = Vector2( 0.33, 0.36 )
+texture = SubResource( 24 )
+
+[node name="ar_napvk" type="Area2D" parent="nap_vikhuan"]
+
+[node name="co_napvk" type="CollisionShape2D" parent="nap_vikhuan/ar_napvk"]
+shape = SubResource( 26 )
+
+[node name="animate_napvk" type="AnimationPlayer" parent="nap_vikhuan"]
+anims/RESET = SubResource( 27 )
+anims/run = SubResource( 28 )
+
+[node name="diamt" type="Sprite" parent="."]
+position = Vector2( 661, 490 )
+scale = Vector2( 0.324847, 0.350917 )
+texture = ExtResource( 4 )
+script = ExtResource( 40 )
+
+[node name="ar_diamt_v1" type="Area2D" parent="diamt"]
+
+[node name="co_ar_diamt_v1" type="CollisionPolygon2D" parent="diamt/ar_diamt_v1"]
+polygon = PoolVector2Array( -338.621, 239.373, -116.978, -344.811, -160.075, -336.262, -209.329, -316.314, -249.348, -290.667, -283.21, -267.87, -323.229, -236.523, -350.934, -208.026, -381.718, -176.68, -406.345, -131.085, -430.972, -91.1897, -446.364, -42.7451, -455.599, 14.2484, -455.599, 56.9935, -440.207, 111.137, -421.737, 153.883, -397.11, 199.477, -369.405, 230.824 )
+
+[node name="ar_diamt_v2" type="Area2D" parent="diamt"]
+
+[node name="co_diamt_v2" type="CollisionPolygon2D" parent="diamt/ar_diamt_v2"]
+polygon = PoolVector2Array( -215.486, -82.6406, -113.9, -344.811, -76.9592, -353.36, -27.7053, -356.21, 33.8622, -353.36, 73.881, -344.811, 132.37, -333.412, 166.232, -324.863, 200.094, -313.464, 243.192, -290.667, 267.818, -276.419, 292.445, -256.471, 320.151, -236.523, 341.699, -216.575, 360.17, -193.778, 378.64, -176.68, 394.032, -151.033, 403.267, -128.235, 415.58, -102.588, 427.894, -76.9413 )
+
+[node name="ar_diamt_v3" type="Area2D" parent="diamt"]
+
+[node name="co_diamt_v3" type="CollisionPolygon2D" parent="diamt/ar_diamt_v3"]
+polygon = PoolVector2Array( -215.486, -79.7909, 427.894, -74.0916, 437.129, -39.8955, 437.129, -19.9478, 437.129, 14.2484, 430.972, 48.4445, 427.894, 76.9413, 421.737, 108.288, 415.58, 131.085, 400.188, 156.732, 394.032, 182.379, 372.483, 205.177, 354.013, 233.673, 326.307, 256.471, 295.524, 282.118, 273.975, 302.066, 243.192, 316.314, 206.251, 333.412, 163.154, 347.661, 107.743, 361.909, 46.1757, 364.759, -18.4702, 364.759, -58.489, 361.909, -107.743, 359.059, -163.154, 347.661, -209.329, 324.863, -246.27, 304.915, -286.289, 284.968, -313.994, 267.87, -323.229, 253.621, -338.621, 245.072 )
+
+[node name="nap_mt" type="Sprite" parent="."]
+modulate = Color( 0.968627, 0.929412, 0.929412, 1 )
+use_parent_material = true
+position = Vector2( 664, 491 )
+scale = Vector2( 0.33, 0.36 )
+texture = SubResource( 24 )
+
+[node name="ar_napmt" type="Area2D" parent="nap_mt"]
+
+[node name="co_napmt" type="CollisionShape2D" parent="nap_mt/ar_napmt"]
+shape = SubResource( 26 )
+
+[node name="animate_napmt" type="AnimationPlayer" parent="nap_mt"]
+anims/RESET = SubResource( 30 )
+anims/run = SubResource( 31 )
+
+[node name="nap_animate" type="AnimatedSprite" parent="."]
+position = Vector2( 671, 511 )
+scale = Vector2( 0.586022, 0.528434 )
+frames = SubResource( 25 )
+animation = "click"
+frame = 12
+
+[node name="bunsen" type="Sprite" parent="."]
+position = Vector2( 1102, 493 )
+texture = ExtResource( 3 )
+script = ExtResource( 36 )
+
+[node name="ar_bunsen" type="Area2D" parent="bunsen"]
+
+[node name="co_bunsen" type="CollisionPolygon2D" parent="bunsen/ar_bunsen"]
+position = Vector2( 19, -10 )
+polygon = PoolVector2Array( -46, -210, -45, -221, -44, -231, -43, -242, -42, -254, -41, -267, -39, -281, -36, -294, -33, -304, -28, -313, -23, -308, -19, -301, -17, -296, -15, -285, -13, -273, -13, -261, -11, -248, -9, -233, -9, -221, -8, -208, -24, -206, -39, -207 )
+
+[node name="but_bunsen" type="Button" parent="bunsen"]
+margin_left = -31.0
+margin_top = -211.0
+margin_right = 26.0
+margin_bottom = 138.0
+mouse_default_cursor_shape = 2
+custom_styles/hover = SubResource( 12 )
+custom_styles/pressed = SubResource( 13 )
+custom_styles/focus = SubResource( 14 )
+custom_styles/normal = SubResource( 15 )
+__meta__ = {
+"_edit_use_anchors_": false
+}
+
+[node name="fire" type="AnimatedSprite" parent="bunsen"]
+visible = false
+position = Vector2( -7, -288 )
+scale = Vector2( 1.11628, 1.15625 )
+frames = SubResource( 16 )
+animation = "fire"
+frame = 3
+
+[node name="fadein" type="AnimationPlayer" parent="."]
+anims/RESET = SubResource( 7 )
+anims/fadein = SubResource( 8 )
+
+[node name="error" type="TextureRect" parent="."]
+visible = false
+modulate = Color( 0.435294, 0.403922, 0.403922, 1 )
+margin_left = 498.0
+margin_top = 379.0
+margin_right = 826.0
+margin_bottom = 577.0
+texture = ExtResource( 10 )
+expand = true
+__meta__ = {
+"_edit_use_anchors_": false
+}
+
+[node name="lbl_error" type="Label" parent="."]
+visible = false
+margin_left = 509.0
+margin_top = 389.0
+margin_right = 815.0
+margin_bottom = 562.0
+custom_fonts/font = SubResource( 9 )
+align = 1
+valign = 1
+autowrap = true
+__meta__ = {
+"_edit_use_anchors_": false
+}
+
+[node name="but_error" type="Button" parent="."]
+visible = false
+margin_left = 779.0
+margin_top = 384.0
+margin_right = 824.0
+margin_bottom = 429.0
+icon = ExtResource( 13 )
+expand_icon = true
+script = ExtResource( 15 )
+__meta__ = {
+"_edit_use_anchors_": false
+}
+
+[node name="but_finish" type="Button" parent="."]
+visible = false
+margin_left = 630.0
+margin_top = 536.0
+margin_right = 710.0
+margin_bottom = 566.0
+mouse_default_cursor_shape = 2
+custom_colors/font_color_disabled = Color( 1, 0.988235, 0.988235, 1 )
+custom_fonts/font = SubResource( 2 )
+custom_styles/hover = SubResource( 43 )
+custom_styles/pressed = SubResource( 22 )
+custom_styles/focus = SubResource( 41 )
+custom_styles/disabled = SubResource( 5 )
+custom_styles/normal = SubResource( 42 )
+text = "Tiếp theo"
+expand_icon = true
+__meta__ = {
+"_edit_use_anchors_": false
+}
+
+[node name="quecay" type="Sprite" parent="."]
+visible = false
+position = Vector2( 255, 224 )
+scale = Vector2( 0.3, 0.2 )
+texture = ExtResource( 11 )
+offset = Vector2( 521.413, 0.20232 )
+script = ExtResource( 38 )
+
+[node name="ar_quecay" type="Area2D" parent="quecay"]
+
+[node name="co_quecay" type="CollisionShape2D" parent="quecay/ar_quecay"]
+position = Vector2( 1066.67, -7.50012 )
+shape = SubResource( 29 )
+
+[node name="dauque" type="Sprite" parent="quecay"]
+material = SubResource( 11 )
+position = Vector2( -30, -5 )
+texture = ExtResource( 12 )
+offset = Vector2( 179, 5 )
+
+[node name="ar_dauque" type="Area2D" parent="quecay/dauque"]
+collision_mask = 2
+
+[node name="co_dauque" type="CollisionShape2D" parent="quecay/dauque/ar_dauque"]
+position = Vector2( 30.0001, 5 )
+shape = SubResource( 18 )
+
+[node name="vikhuan" type="Sprite" parent="quecay"]
+visible = false
+position = Vector2( -23.3334, 0 )
+scale = Vector2( 1.40351, 1.5 )
+texture = ExtResource( 37 )
+
+[node name="diemcuoi" type="Sprite" parent="."]
+visible = false
+scale = Vector2( 0.01, 0.01 )
+texture = ExtResource( 13 )
+
+[node name="fadeout" type="AnimationPlayer" parent="."]
+anims/RESET = SubResource( 19 )
+anims/fadeout = SubResource( 20 )
+
+[node name="nap_petri" type="Sprite" parent="."]
+modulate = Color( 0.968627, 0.929412, 0.929412, 1 )
+use_parent_material = true
+position = Vector2( 1000, 489 )
+scale = Vector2( 0.33, 0.36 )
+texture = ExtResource( 41 )
+
+[node name="animate" type="AnimationPlayer" parent="nap_petri"]
+anims/RESET = SubResource( 47 )
+anims/run = SubResource( 21 )
+
+[node name="tucay" parent="." instance=ExtResource( 43 )]
+visible = false
+
+[node name="sound_click" type="AudioStreamPlayer" parent="."]
+stream = ExtResource( 45 )
+
+[node name="Loading" type="Control" parent="."]
+visible = false
+anchor_right = 1.0
+anchor_bottom = 1.0
+margin_right = 1200.0
+margin_bottom = 700.0
+__meta__ = {
+"_edit_use_anchors_": false
+}
+
+[node name="bg_loading" type="TextureRect" parent="Loading"]
+anchor_right = 1.0
+anchor_bottom = 1.0
+texture = ExtResource( 8 )
+
+[node name="txt_loading" type="Label" parent="Loading"]
+anchor_top = 1.0
+anchor_right = 1.0
+anchor_bottom = 1.0
+margin_left = 2.0
+margin_top = -379.0
+margin_right = 2.0
+margin_bottom = -327.0
+custom_fonts/font = SubResource( 44 )
+text = "Đang tải trang, vui lòng đợi ..."
+align = 1
+valign = 1
+__meta__ = {
+"_edit_use_anchors_": false
+}
+
+[node name="ani_loading" type="AnimationPlayer" parent="Loading"]
+anims/RESET = SubResource( 45 )
+anims/run = SubResource( 46 )
+
+[connection signal="button_up" from="but_refresh" to="." method="_on_but_refresh_button_up"]
+[connection signal="button_up" from="but_homepage" to="." method="_on_but_homepage_button_up"]
+[connection signal="button_up" from="but_hengio" to="." method="_on_but_hengio_button_up"]
+[connection signal="area_entered" from="diavk/ar_ngoaibien" to="diavk" method="_on_ar_ngoaibien_area_entered"]
+[connection signal="area_exited" from="diavk/ar_ngoaibien" to="diavk" method="_on_ar_ngoaibien_area_exited"]
+[connection signal="area_entered" from="diavk/ar_khuanlac1" to="diavk" method="_on_ar_khuanlac1_area_entered"]
+[connection signal="area_exited" from="diavk/ar_khuanlac1" to="diavk" method="_on_ar_khuanlac1_area_exited"]
+[connection signal="mouse_entered" from="nap_vikhuan/ar_napvk" to="." method="_on_ar_napvk_mouse_entered"]
+[connection signal="mouse_exited" from="nap_vikhuan/ar_napvk" to="." method="_on_ar_napvk_mouse_exited"]
+[connection signal="area_entered" from="diamt/ar_diamt_v1" to="diamt" method="_on_ar_diamt_v1_area_entered"]
+[connection signal="area_exited" from="diamt/ar_diamt_v1" to="diamt" method="_on_ar_diamt_v1_area_exited"]
+[connection signal="input_event" from="diamt/ar_diamt_v1" to="." method="_on_ar_diamt_v1_input_event"]
+[connection signal="area_entered" from="diamt/ar_diamt_v2" to="diamt" method="_on_ar_diamt_v2_area_entered"]
+[connection signal="area_exited" from="diamt/ar_diamt_v2" to="diamt" method="_on_ar_diamt_v2_area_exited"]
+[connection signal="input_event" from="diamt/ar_diamt_v2" to="." method="_on_ar_diamt_v2_input_event"]
+[connection signal="area_entered" from="diamt/ar_diamt_v3" to="diamt" method="_on_ar_diamt_v3_area_entered"]
+[connection signal="area_exited" from="diamt/ar_diamt_v3" to="diamt" method="_on_ar_diamt_v3_area_exited"]
+[connection signal="input_event" from="diamt/ar_diamt_v3" to="." method="_on_ar_diamt_v3_input_event"]
+[connection signal="mouse_entered" from="nap_mt/ar_napmt" to="." method="_on_ar_napmt_mouse_entered"]
+[connection signal="mouse_exited" from="nap_mt/ar_napmt" to="." method="_on_ar_napmt_mouse_exited"]
+[connection signal="animation_finished" from="nap_mt/animate_napmt" to="." method="_on_animate_napmt_animation_finished"]
+[connection signal="area_entered" from="bunsen/ar_bunsen" to="bunsen" method="_on_ar_bunsen_area_entered"]
+[connection signal="area_exited" from="bunsen/ar_bunsen" to="bunsen" method="_on_ar_bunsen_area_exited"]
+[connection signal="button_up" from="bunsen/but_bunsen" to="bunsen" method="_on_but_bunsen_button_up"]
+[connection signal="button_up" from="but_error" to="but_error" method="_on_but_error_button_up"]
+[connection signal="button_up" from="but_finish" to="." method="_on_but_finish_button_up"]
+[connection signal="mouse_entered" from="quecay/ar_quecay" to="quecay" method="_on_ar_quecay_mouse_entered"]
+[connection signal="mouse_exited" from="quecay/ar_quecay" to="quecay" method="_on_ar_quecay_mouse_exited"]
+[connection signal="mouse_entered" from="quecay/dauque/ar_dauque" to="quecay" method="_on_ar_dauque_mouse_entered"]
+[connection signal="mouse_exited" from="quecay/dauque/ar_dauque" to="quecay" method="_on_ar_dauque_mouse_exited"]
+[connection signal="animation_finished" from="Loading/ani_loading" to="." method="_on_ani_loading_animation_finished"]

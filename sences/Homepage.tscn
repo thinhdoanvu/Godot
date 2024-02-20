@@ -1,0 +1,1287 @@
+[gd_scene load_steps=65 format=2]
+
+[ext_resource path="res://sences/Homepage.gd" type="Script" id=1]
+[ext_resource path="res://pics/petri.png" type="Texture" id=2]
+[ext_resource path="res://pics/tucay-01-01-01.png" type="Texture" id=3]
+[ext_resource path="res://sound/mouse_click.wav" type="AudioStream" id=4]
+[ext_resource path="res://fonts/BeVietnamPro-Regular.ttf" type="DynamicFontData" id=5]
+[ext_resource path="res://pics/nentrang.png" type="Texture" id=6]
+[ext_resource path="res://pics/petri_empty.png" type="Texture" id=7]
+[ext_resource path="res://pics/quecay_full.png" type="Texture" id=8]
+[ext_resource path="res://animated/bunsen_burner0.png" type="Texture" id=9]
+[ext_resource path="res://pics/Denkho.png" type="Texture" id=10]
+[ext_resource path="res://animated/bunsen_burner19.png" type="Texture" id=11]
+[ext_resource path="res://animated/bunsen_burner5.png" type="Texture" id=12]
+[ext_resource path="res://animated/bunsen_burner14.png" type="Texture" id=13]
+[ext_resource path="res://animated/bunsen_burner16.png" type="Texture" id=14]
+[ext_resource path="res://animated/bunsen_burner4.png" type="Texture" id=15]
+[ext_resource path="res://animated/bunsen_burner11.png" type="Texture" id=16]
+[ext_resource path="res://animated/bunsen_burner3.png" type="Texture" id=17]
+[ext_resource path="res://animated/bunsen_burner17.png" type="Texture" id=18]
+[ext_resource path="res://animated/bunsen_burner9.png" type="Texture" id=19]
+[ext_resource path="res://animated/bunsen_burner13.png" type="Texture" id=20]
+[ext_resource path="res://animated/bunsen_burner18.png" type="Texture" id=21]
+[ext_resource path="res://animated/bunsen_burner7.png" type="Texture" id=22]
+[ext_resource path="res://animated/bunsen_burner8.png" type="Texture" id=23]
+[ext_resource path="res://animated/bunsen_burner2.png" type="Texture" id=24]
+[ext_resource path="res://animated/bunsen_burner15.png" type="Texture" id=25]
+[ext_resource path="res://animated/bunsen_burner1.png" type="Texture" id=26]
+[ext_resource path="res://animated/bunsen_burner10.png" type="Texture" id=27]
+[ext_resource path="res://animated/bunsen_burner12.png" type="Texture" id=28]
+[ext_resource path="res://animated/bunsen_burner6.png" type="Texture" id=29]
+[ext_resource path="res://pics/logo_NTU.png" type="Texture" id=30]
+[ext_resource path="res://pics/close_button.png" type="Texture" id=31]
+[ext_resource path="res://fonts/BeVietnamPro-Bold.ttf" type="DynamicFontData" id=32]
+[ext_resource path="res://pics/gioithieu_grey.png" type="Texture" id=33]
+[ext_resource path="res://pics/thuchanh1_grey.png" type="Texture" id=34]
+[ext_resource path="res://pics/kiemtra_grey.png" type="Texture" id=35]
+[ext_resource path="res://pics/ghichu.png" type="Texture" id=36]
+[ext_resource path="res://sound/voice 0.mp3" type="AudioStream" id=37]
+[ext_resource path="res://pics/Speaker_ON.png" type="Texture" id=38]
+[ext_resource path="res://pics/Speaker_MUTE.png" type="Texture" id=39]
+[ext_resource path="res://sences/notebook_gioithieu.tscn" type="PackedScene" id=40]
+[ext_resource path="res://sound/mouse_click.mp3" type="AudioStream" id=41]
+[ext_resource path="res://sences/tailieuhuongdan.tscn" type="PackedScene" id=42]
+[ext_resource path="res://sences/tracnghiem.tscn" type="PackedScene" id=43]
+[ext_resource path="res://pics/huongdan_grey.png" type="Texture" id=44]
+[ext_resource path="res://pics/thuchanh2_grey.png" type="Texture" id=45]
+
+[sub_resource type="DynamicFont" id=14]
+font_data = ExtResource( 32 )
+
+[sub_resource type="Shader" id=1]
+code = "shader_type canvas_item;
+
+uniform vec4 line_color : hint_color = vec4(1.0);
+uniform float line_thickness : hint_range(0, 10) = 1.0;
+uniform bool click = false;
+
+const vec2 OFFSETS[8] = {
+	vec2(-1, -1), vec2(-1, 0), vec2(-1, 1), vec2(0, -1), vec2(0, 1), 
+	vec2(1, -1), vec2(1, 0), vec2(1, 1)
+};
+
+void fragment() {
+	vec2 size = TEXTURE_PIXEL_SIZE * line_thickness;
+	float outline = 1.0;
+	
+	for (int i = 0; i < OFFSETS.length(); i++) {
+		outline *= texture(TEXTURE, UV + size * OFFSETS[i]).a;
+	}
+	outline = 1.0 - outline;
+	
+	vec4 color = texture(TEXTURE, UV);
+	vec4 outlined_result = mix(color, line_color, outline * color.a);
+	if (click==true){
+		COLOR = mix(color, outlined_result, outlined_result.a);
+	}
+	else{
+		outlined_result = mix(color, vec4(0,0,0,1), outline * color.a);
+		COLOR = mix(color, outlined_result, outlined_result.a);
+	}
+}"
+
+[sub_resource type="ShaderMaterial" id=2]
+shader = SubResource( 1 )
+shader_param/line_color = Color( 1, 0.945098, 0, 1 )
+shader_param/line_thickness = 5.0
+shader_param/click = false
+
+[sub_resource type="CapsuleShape2D" id=3]
+radius = 207.567
+height = 166.031
+
+[sub_resource type="Shader" id=5]
+code = "shader_type canvas_item;
+
+uniform vec4 line_color : hint_color = vec4(1.0);
+uniform float line_thickness : hint_range(0, 10) = 1.0;
+uniform bool click = false;
+
+const vec2 OFFSETS[8] = {
+	vec2(-1, -1), vec2(-1, 0), vec2(-1, 1), vec2(0, -1), vec2(0, 1), 
+	vec2(1, -1), vec2(1, 0), vec2(1, 1)
+};
+
+void fragment() {
+	vec2 size = TEXTURE_PIXEL_SIZE * line_thickness;
+	float outline = 1.0;
+	
+	for (int i = 0; i < OFFSETS.length(); i++) {
+		outline *= texture(TEXTURE, UV + size * OFFSETS[i]).a;
+	}
+	outline = 1.0 - outline;
+	
+	vec4 color = texture(TEXTURE, UV);
+	vec4 outlined_result = mix(color, line_color, outline * color.a);
+	if (click==true){
+		COLOR = mix(color, outlined_result, outlined_result.a);
+	}
+	else{
+		outlined_result = mix(color, vec4(0,0,0,1), outline * color.a);
+		COLOR = mix(color, outlined_result, outlined_result.a);
+	}
+}"
+
+[sub_resource type="ShaderMaterial" id=6]
+shader = SubResource( 5 )
+shader_param/line_color = Color( 0.988235, 1, 0, 1 )
+shader_param/line_thickness = 5.0
+shader_param/click = false
+
+[sub_resource type="CapsuleShape2D" id=7]
+radius = 233.739
+height = 467.479
+
+[sub_resource type="Shader" id=8]
+code = "shader_type canvas_item;
+
+uniform vec4 line_color : hint_color = vec4(1.0);
+uniform float line_thickness : hint_range(0, 10) = 1.0;
+uniform bool click = false;
+
+const vec2 OFFSETS[8] = {
+	vec2(-1, -1), vec2(-1, 0), vec2(-1, 1), vec2(0, -1), vec2(0, 1), 
+	vec2(1, -1), vec2(1, 0), vec2(1, 1)
+};
+
+void fragment() {
+	vec2 size = TEXTURE_PIXEL_SIZE * line_thickness;
+	float outline = 1.0;
+	
+	for (int i = 0; i < OFFSETS.length(); i++) {
+		outline *= texture(TEXTURE, UV + size * OFFSETS[i]).a;
+	}
+	outline = 1.0 - outline;
+	
+	vec4 color = texture(TEXTURE, UV);
+	vec4 outlined_result = mix(color, line_color, outline * color.a);
+	if (click==true){
+		COLOR = mix(color, outlined_result, outlined_result.a);
+	}
+	else{
+		outlined_result = mix(color, vec4(0,0,0,1), outline * color.a);
+		COLOR = mix(color, outlined_result, outlined_result.a);
+	}
+}"
+
+[sub_resource type="ShaderMaterial" id=9]
+shader = SubResource( 8 )
+shader_param/line_color = Color( 1, 0.992157, 0, 1 )
+shader_param/line_thickness = 5.0
+shader_param/click = false
+
+[sub_resource type="CapsuleShape2D" id=10]
+radius = 35.2935
+height = 1070.46
+
+[sub_resource type="DynamicFont" id=4]
+size = 20
+extra_spacing_space = 1
+font_data = ExtResource( 5 )
+
+[sub_resource type="Shader" id=11]
+code = "shader_type canvas_item;
+
+uniform vec4 line_color : hint_color = vec4(1.0);
+uniform float line_thickness : hint_range(0, 10) = 1.0;
+uniform bool click = false;
+
+const vec2 OFFSETS[8] = {
+	vec2(-1, -1), vec2(-1, 0), vec2(-1, 1), vec2(0, -1), vec2(0, 1), 
+	vec2(1, -1), vec2(1, 0), vec2(1, 1)
+};
+
+void fragment() {
+	vec2 size = TEXTURE_PIXEL_SIZE * line_thickness;
+	float outline = 1.0;
+	
+	for (int i = 0; i < OFFSETS.length(); i++) {
+		outline *= texture(TEXTURE, UV + size * OFFSETS[i]).a;
+	}
+	outline = 1.0 - outline;
+	
+	vec4 color = texture(TEXTURE, UV);
+	vec4 outlined_result = mix(color, line_color, outline * color.a);
+	if (click==true){
+		COLOR = mix(color, outlined_result, outlined_result.a);
+	}
+	else{
+		outlined_result = mix(color, vec4(0,0,0,1), outline * color.a);
+		COLOR = mix(color, outlined_result, outlined_result.a);
+	}
+}"
+
+[sub_resource type="ShaderMaterial" id=12]
+shader = SubResource( 11 )
+shader_param/line_color = Color( 1, 0.992157, 0, 1 )
+shader_param/line_thickness = 2.0
+shader_param/click = false
+
+[sub_resource type="SpriteFrames" id=13]
+animations = [ {
+"frames": [ ExtResource( 9 ), ExtResource( 26 ), ExtResource( 24 ), ExtResource( 17 ), ExtResource( 15 ), ExtResource( 12 ), ExtResource( 29 ), ExtResource( 22 ), ExtResource( 23 ), ExtResource( 19 ), ExtResource( 27 ), ExtResource( 16 ), ExtResource( 28 ), ExtResource( 20 ), ExtResource( 13 ), ExtResource( 25 ), ExtResource( 14 ), ExtResource( 18 ), ExtResource( 21 ), ExtResource( 11 ) ],
+"loop": true,
+"name": "fire",
+"speed": 20.0
+} ]
+
+[sub_resource type="DynamicFont" id=19]
+font_data = ExtResource( 32 )
+
+[sub_resource type="Animation" id=17]
+length = 0.001
+tracks/0/type = "bezier"
+tracks/0/path = NodePath("gioithieu:rect_position:x")
+tracks/0/interp = 1
+tracks/0/loop_wrap = true
+tracks/0/imported = false
+tracks/0/enabled = true
+tracks/0/keys = {
+"points": PoolRealArray( 1122, -0.25, 0, 0.25, 0 ),
+"times": PoolRealArray( 0 )
+}
+tracks/1/type = "bezier"
+tracks/1/path = NodePath("gioithieu:rect_position:y")
+tracks/1/interp = 1
+tracks/1/loop_wrap = true
+tracks/1/imported = false
+tracks/1/enabled = true
+tracks/1/keys = {
+"points": PoolRealArray( 70, -0.25, 0, 0.25, 0 ),
+"times": PoolRealArray( 0 )
+}
+tracks/2/type = "bezier"
+tracks/2/path = NodePath("gioithieu:rect_rotation")
+tracks/2/interp = 1
+tracks/2/loop_wrap = true
+tracks/2/imported = false
+tracks/2/enabled = true
+tracks/2/keys = {
+"points": PoolRealArray( 0, -0.25, 0, 0.25, 0 ),
+"times": PoolRealArray( 0 )
+}
+tracks/3/type = "bezier"
+tracks/3/path = NodePath("huongdan:rect_position:x")
+tracks/3/interp = 1
+tracks/3/loop_wrap = true
+tracks/3/imported = false
+tracks/3/enabled = true
+tracks/3/keys = {
+"points": PoolRealArray( 1122, -0.25, 0, 0.25, 0 ),
+"times": PoolRealArray( 0 )
+}
+tracks/4/type = "bezier"
+tracks/4/path = NodePath("huongdan:rect_position:y")
+tracks/4/interp = 1
+tracks/4/loop_wrap = true
+tracks/4/imported = false
+tracks/4/enabled = true
+tracks/4/keys = {
+"points": PoolRealArray( 170, -0.25, 0, 0.25, 0 ),
+"times": PoolRealArray( 0 )
+}
+tracks/5/type = "bezier"
+tracks/5/path = NodePath("huongdan:rect_rotation")
+tracks/5/interp = 1
+tracks/5/loop_wrap = true
+tracks/5/imported = false
+tracks/5/enabled = true
+tracks/5/keys = {
+"points": PoolRealArray( 0, -0.25, 0, 0.25, 0 ),
+"times": PoolRealArray( 0 )
+}
+tracks/6/type = "bezier"
+tracks/6/path = NodePath("thuchanh1:rect_position:x")
+tracks/6/interp = 1
+tracks/6/loop_wrap = true
+tracks/6/imported = false
+tracks/6/enabled = true
+tracks/6/keys = {
+"points": PoolRealArray( 1122, -0.25, 0, 0.25, 0 ),
+"times": PoolRealArray( 0 )
+}
+tracks/7/type = "bezier"
+tracks/7/path = NodePath("thuchanh1:rect_position:y")
+tracks/7/interp = 1
+tracks/7/loop_wrap = true
+tracks/7/imported = false
+tracks/7/enabled = true
+tracks/7/keys = {
+"points": PoolRealArray( 270, -0.25, 0, 0.25, 0 ),
+"times": PoolRealArray( 0 )
+}
+tracks/8/type = "bezier"
+tracks/8/path = NodePath("thuchanh1:rect_rotation")
+tracks/8/interp = 1
+tracks/8/loop_wrap = true
+tracks/8/imported = false
+tracks/8/enabled = true
+tracks/8/keys = {
+"points": PoolRealArray( 0, -0.25, 0, 0.25, 0 ),
+"times": PoolRealArray( 0 )
+}
+tracks/9/type = "bezier"
+tracks/9/path = NodePath("thuchanh2:rect_position:x")
+tracks/9/interp = 1
+tracks/9/loop_wrap = true
+tracks/9/imported = false
+tracks/9/enabled = true
+tracks/9/keys = {
+"points": PoolRealArray( 1122, -0.25, 0, 0.25, 0 ),
+"times": PoolRealArray( 0 )
+}
+tracks/10/type = "bezier"
+tracks/10/path = NodePath("thuchanh2:rect_position:y")
+tracks/10/interp = 1
+tracks/10/loop_wrap = true
+tracks/10/imported = false
+tracks/10/enabled = true
+tracks/10/keys = {
+"points": PoolRealArray( 370, -0.25, 0, 0.25, 0 ),
+"times": PoolRealArray( 0 )
+}
+tracks/11/type = "bezier"
+tracks/11/path = NodePath("thuchanh2:rect_rotation")
+tracks/11/interp = 1
+tracks/11/loop_wrap = true
+tracks/11/imported = false
+tracks/11/enabled = true
+tracks/11/keys = {
+"points": PoolRealArray( 0, -0.25, 0, 0.25, 0 ),
+"times": PoolRealArray( 0 )
+}
+tracks/12/type = "bezier"
+tracks/12/path = NodePath("kiemtra:rect_position:x")
+tracks/12/interp = 1
+tracks/12/loop_wrap = true
+tracks/12/imported = false
+tracks/12/enabled = true
+tracks/12/keys = {
+"points": PoolRealArray( 1122, -0.25, 0, 0.25, 0 ),
+"times": PoolRealArray( 0 )
+}
+tracks/13/type = "bezier"
+tracks/13/path = NodePath("kiemtra:rect_position:y")
+tracks/13/interp = 1
+tracks/13/loop_wrap = true
+tracks/13/imported = false
+tracks/13/enabled = true
+tracks/13/keys = {
+"points": PoolRealArray( 470, -0.25, 0, 0.25, 0 ),
+"times": PoolRealArray( 0 )
+}
+tracks/14/type = "bezier"
+tracks/14/path = NodePath("kiemtra:rect_rotation")
+tracks/14/interp = 1
+tracks/14/loop_wrap = true
+tracks/14/imported = false
+tracks/14/enabled = true
+tracks/14/keys = {
+"points": PoolRealArray( 0, -0.25, 0, 0.25, 0 ),
+"times": PoolRealArray( 0 )
+}
+
+[sub_resource type="Animation" id=18]
+resource_name = "fadein"
+tracks/0/type = "bezier"
+tracks/0/path = NodePath("gioithieu:rect_position:x")
+tracks/0/interp = 1
+tracks/0/loop_wrap = true
+tracks/0/imported = false
+tracks/0/enabled = true
+tracks/0/keys = {
+"points": PoolRealArray( 1122, -0.25, 0, 0.25, 0, 1122, -0.25, 0, 0.25, 0 ),
+"times": PoolRealArray( 0, 0.6 )
+}
+tracks/1/type = "bezier"
+tracks/1/path = NodePath("gioithieu:rect_position:y")
+tracks/1/interp = 1
+tracks/1/loop_wrap = true
+tracks/1/imported = false
+tracks/1/enabled = true
+tracks/1/keys = {
+"points": PoolRealArray( 800, -0.25, 0, 0.25, 0, 70, -0.25, 0, 0.25, 0 ),
+"times": PoolRealArray( 0, 0.6 )
+}
+tracks/2/type = "bezier"
+tracks/2/path = NodePath("gioithieu:rect_rotation")
+tracks/2/interp = 1
+tracks/2/loop_wrap = true
+tracks/2/imported = false
+tracks/2/enabled = true
+tracks/2/keys = {
+"points": PoolRealArray( 0, -0.25, 0, 0.25, 0, 0, -0.25, 0, 0.25, 0 ),
+"times": PoolRealArray( 0, 0.6 )
+}
+tracks/3/type = "bezier"
+tracks/3/path = NodePath("huongdan:rect_position:x")
+tracks/3/interp = 1
+tracks/3/loop_wrap = true
+tracks/3/imported = false
+tracks/3/enabled = true
+tracks/3/keys = {
+"points": PoolRealArray( 1122, -0.25, 0, 0.25, 0, 1122, -0.25, 0, 0.25, 0 ),
+"times": PoolRealArray( 0, 0.7 )
+}
+tracks/4/type = "bezier"
+tracks/4/path = NodePath("huongdan:rect_position:y")
+tracks/4/interp = 1
+tracks/4/loop_wrap = true
+tracks/4/imported = false
+tracks/4/enabled = true
+tracks/4/keys = {
+"points": PoolRealArray( 800, -0.25, 0, 0.25, 0, 170, -0.25, 0, 0.25, 0 ),
+"times": PoolRealArray( 0, 0.7 )
+}
+tracks/5/type = "bezier"
+tracks/5/path = NodePath("huongdan:rect_rotation")
+tracks/5/interp = 1
+tracks/5/loop_wrap = true
+tracks/5/imported = false
+tracks/5/enabled = true
+tracks/5/keys = {
+"points": PoolRealArray( 0, -0.25, 0, 0.25, 0, 0, -0.25, 0, 0.25, 0 ),
+"times": PoolRealArray( 0, 0.7 )
+}
+tracks/6/type = "bezier"
+tracks/6/path = NodePath("thuchanh1:rect_position:x")
+tracks/6/interp = 1
+tracks/6/loop_wrap = true
+tracks/6/imported = false
+tracks/6/enabled = true
+tracks/6/keys = {
+"points": PoolRealArray( 1122, -0.25, 0, 0.25, 0, 1122, -0.25, 0, 0.25, 0 ),
+"times": PoolRealArray( 0, 0.8 )
+}
+tracks/7/type = "bezier"
+tracks/7/path = NodePath("thuchanh1:rect_position:y")
+tracks/7/interp = 1
+tracks/7/loop_wrap = true
+tracks/7/imported = false
+tracks/7/enabled = true
+tracks/7/keys = {
+"points": PoolRealArray( 800, -0.25, 0, 0.25, 0, 270, -0.25, 0, 0.25, 0 ),
+"times": PoolRealArray( 0, 0.8 )
+}
+tracks/8/type = "bezier"
+tracks/8/path = NodePath("thuchanh1:rect_rotation")
+tracks/8/interp = 1
+tracks/8/loop_wrap = true
+tracks/8/imported = false
+tracks/8/enabled = true
+tracks/8/keys = {
+"points": PoolRealArray( 0, -0.25, 0, 0.25, 0, 0, -0.25, 0, 0.25, 0 ),
+"times": PoolRealArray( 0, 0.8 )
+}
+tracks/9/type = "bezier"
+tracks/9/path = NodePath("thuchanh2:rect_position:x")
+tracks/9/interp = 1
+tracks/9/loop_wrap = true
+tracks/9/imported = false
+tracks/9/enabled = true
+tracks/9/keys = {
+"points": PoolRealArray( 1122, -0.25, 0, 0.25, 0, 1122, -0.25, 0, 0.25, 0 ),
+"times": PoolRealArray( 0, 0.9 )
+}
+tracks/10/type = "bezier"
+tracks/10/path = NodePath("thuchanh2:rect_position:y")
+tracks/10/interp = 1
+tracks/10/loop_wrap = true
+tracks/10/imported = false
+tracks/10/enabled = true
+tracks/10/keys = {
+"points": PoolRealArray( 800, -0.25, 0, 0.25, 0, 370, -0.25, 0, 0.25, 0 ),
+"times": PoolRealArray( 0, 0.9 )
+}
+tracks/11/type = "bezier"
+tracks/11/path = NodePath("thuchanh2:rect_rotation")
+tracks/11/interp = 1
+tracks/11/loop_wrap = true
+tracks/11/imported = false
+tracks/11/enabled = true
+tracks/11/keys = {
+"points": PoolRealArray( 0, -0.25, 0, 0.25, 0, 0, -0.25, 0, 0.25, 0 ),
+"times": PoolRealArray( 0, 0.9 )
+}
+tracks/12/type = "bezier"
+tracks/12/path = NodePath("kiemtra:rect_position:x")
+tracks/12/interp = 1
+tracks/12/loop_wrap = true
+tracks/12/imported = false
+tracks/12/enabled = true
+tracks/12/keys = {
+"points": PoolRealArray( 1122, -0.25, 0, 0.25, 0, 1122, -0.25, 0, 0.25, 0 ),
+"times": PoolRealArray( 0, 1 )
+}
+tracks/13/type = "bezier"
+tracks/13/path = NodePath("kiemtra:rect_position:y")
+tracks/13/interp = 1
+tracks/13/loop_wrap = true
+tracks/13/imported = false
+tracks/13/enabled = true
+tracks/13/keys = {
+"points": PoolRealArray( 800, -0.25, 0, 0.25, 0, 470, -0.25, 0, 0.25, 0 ),
+"times": PoolRealArray( 0, 1 )
+}
+tracks/14/type = "bezier"
+tracks/14/path = NodePath("kiemtra:rect_rotation")
+tracks/14/interp = 1
+tracks/14/loop_wrap = true
+tracks/14/imported = false
+tracks/14/enabled = true
+tracks/14/keys = {
+"points": PoolRealArray( 0, -0.25, 0, 0.25, 0, 0, -0.25, 0, 0.25, 0 ),
+"times": PoolRealArray( 0, 1 )
+}
+
+[sub_resource type="Animation" id=20]
+length = 0.001
+tracks/0/type = "bezier"
+tracks/0/path = NodePath("lbl_intro:rect_position:x")
+tracks/0/interp = 1
+tracks/0/loop_wrap = true
+tracks/0/imported = false
+tracks/0/enabled = true
+tracks/0/keys = {
+"points": PoolRealArray( 203, -0.25, 0, 0.25, 0 ),
+"times": PoolRealArray( 0 )
+}
+tracks/1/type = "bezier"
+tracks/1/path = NodePath("lbl_intro:rect_position:y")
+tracks/1/interp = 1
+tracks/1/loop_wrap = true
+tracks/1/imported = false
+tracks/1/enabled = true
+tracks/1/keys = {
+"points": PoolRealArray( 566, -0.25, 0, 0.25, 0 ),
+"times": PoolRealArray( 0 )
+}
+tracks/2/type = "bezier"
+tracks/2/path = NodePath("lbl_intro:rect_rotation")
+tracks/2/interp = 1
+tracks/2/loop_wrap = true
+tracks/2/imported = false
+tracks/2/enabled = true
+tracks/2/keys = {
+"points": PoolRealArray( 0, -0.25, 0, 0.25, 0 ),
+"times": PoolRealArray( 0 )
+}
+tracks/3/type = "bezier"
+tracks/3/path = NodePath("lbl_intro:percent_visible")
+tracks/3/interp = 1
+tracks/3/loop_wrap = true
+tracks/3/imported = false
+tracks/3/enabled = true
+tracks/3/keys = {
+"points": PoolRealArray( 0, -0.25, 0, 0.25, 0 ),
+"times": PoolRealArray( 0 )
+}
+tracks/4/type = "value"
+tracks/4/path = NodePath("lbl_intro:text")
+tracks/4/interp = 1
+tracks/4/loop_wrap = true
+tracks/4/imported = false
+tracks/4/enabled = true
+tracks/4/keys = {
+"times": PoolRealArray( 0 ),
+"transitions": PoolRealArray( 1 ),
+"update": 0,
+"values": [ "Chào mừng các em đến với phòng thí nghiệm sinh học ảo NTU-BIOVLAB. 
+Trong lớp học mô phỏng hôm nay, chúng ta cùng thực hiện kỹ thuật cấy ria trong phân lập vi sinh vật" ]
+}
+tracks/5/type = "value"
+tracks/5/path = NodePath("lbl_intro:visible")
+tracks/5/interp = 1
+tracks/5/loop_wrap = true
+tracks/5/imported = false
+tracks/5/enabled = true
+tracks/5/keys = {
+"times": PoolRealArray( 0 ),
+"transitions": PoolRealArray( 1 ),
+"update": 0,
+"values": [ true ]
+}
+tracks/6/type = "value"
+tracks/6/path = NodePath("detail:visible")
+tracks/6/interp = 1
+tracks/6/loop_wrap = true
+tracks/6/imported = false
+tracks/6/enabled = true
+tracks/6/keys = {
+"times": PoolRealArray( 0 ),
+"transitions": PoolRealArray( 1 ),
+"update": 0,
+"values": [ false ]
+}
+tracks/7/type = "value"
+tracks/7/path = NodePath("gioithieu:mouse_filter")
+tracks/7/interp = 1
+tracks/7/loop_wrap = true
+tracks/7/imported = false
+tracks/7/enabled = true
+tracks/7/keys = {
+"times": PoolRealArray( 0 ),
+"transitions": PoolRealArray( 1 ),
+"update": 0,
+"values": [ 1 ]
+}
+tracks/8/type = "value"
+tracks/8/path = NodePath("huongdan:mouse_filter")
+tracks/8/interp = 1
+tracks/8/loop_wrap = true
+tracks/8/imported = false
+tracks/8/enabled = true
+tracks/8/keys = {
+"times": PoolRealArray( 0 ),
+"transitions": PoolRealArray( 1 ),
+"update": 0,
+"values": [ 1 ]
+}
+tracks/9/type = "value"
+tracks/9/path = NodePath("thuchanh1:mouse_filter")
+tracks/9/interp = 1
+tracks/9/loop_wrap = true
+tracks/9/imported = false
+tracks/9/enabled = true
+tracks/9/keys = {
+"times": PoolRealArray( 0 ),
+"transitions": PoolRealArray( 1 ),
+"update": 0,
+"values": [ 1 ]
+}
+tracks/10/type = "value"
+tracks/10/path = NodePath("thuchanh2:mouse_filter")
+tracks/10/interp = 1
+tracks/10/loop_wrap = true
+tracks/10/imported = false
+tracks/10/enabled = true
+tracks/10/keys = {
+"times": PoolRealArray( 0 ),
+"transitions": PoolRealArray( 1 ),
+"update": 0,
+"values": [ 1 ]
+}
+tracks/11/type = "value"
+tracks/11/path = NodePath("kiemtra:mouse_filter")
+tracks/11/interp = 1
+tracks/11/loop_wrap = true
+tracks/11/imported = false
+tracks/11/enabled = true
+tracks/11/keys = {
+"times": PoolRealArray( 0 ),
+"transitions": PoolRealArray( 1 ),
+"update": 0,
+"values": [ 1 ]
+}
+tracks/12/type = "value"
+tracks/12/path = NodePath("bunsen/ar_bunsen:visible")
+tracks/12/interp = 1
+tracks/12/loop_wrap = true
+tracks/12/imported = false
+tracks/12/enabled = true
+tracks/12/keys = {
+"times": PoolRealArray( 0 ),
+"transitions": PoolRealArray( 1 ),
+"update": 0,
+"values": [ true ]
+}
+tracks/13/type = "value"
+tracks/13/path = NodePath("diavk/ar_diavk:visible")
+tracks/13/interp = 1
+tracks/13/loop_wrap = true
+tracks/13/imported = false
+tracks/13/enabled = true
+tracks/13/keys = {
+"times": PoolRealArray( 0 ),
+"transitions": PoolRealArray( 1 ),
+"update": 0,
+"values": [ true ]
+}
+tracks/14/type = "value"
+tracks/14/path = NodePath("diamt/ar_diamt:visible")
+tracks/14/interp = 1
+tracks/14/loop_wrap = true
+tracks/14/imported = false
+tracks/14/enabled = true
+tracks/14/keys = {
+"times": PoolRealArray( 0 ),
+"transitions": PoolRealArray( 1 ),
+"update": 0,
+"values": [ true ]
+}
+tracks/15/type = "value"
+tracks/15/path = NodePath("quecay/ar_quecay:visible")
+tracks/15/interp = 1
+tracks/15/loop_wrap = true
+tracks/15/imported = false
+tracks/15/enabled = true
+tracks/15/keys = {
+"times": PoolRealArray( 0 ),
+"transitions": PoolRealArray( 1 ),
+"update": 0,
+"values": [ true ]
+}
+
+[sub_resource type="Animation" id=21]
+resource_name = "run"
+tracks/0/type = "bezier"
+tracks/0/path = NodePath("lbl_intro:percent_visible")
+tracks/0/interp = 1
+tracks/0/loop_wrap = true
+tracks/0/imported = false
+tracks/0/enabled = true
+tracks/0/keys = {
+"points": PoolRealArray( 1, -0.25, 0, 0.25, 0, 1, -0.25, 0, 0.25, 0 ),
+"times": PoolRealArray( 0, 0.9 )
+}
+tracks/1/type = "value"
+tracks/1/path = NodePath("lbl_intro:text")
+tracks/1/interp = 1
+tracks/1/loop_wrap = true
+tracks/1/imported = false
+tracks/1/enabled = true
+tracks/1/keys = {
+"times": PoolRealArray( 0, 0.9 ),
+"transitions": PoolRealArray( 1, 1 ),
+"update": 1,
+"values": [ "Chào mừng các em đến với phòng thí nghiệm sinh học ảo NTU-BIOVLAB.
+Trong lớp học mô phỏng hôm nay, chúng ta cùng thực hiện kỹ thuật cấy ria trong phân lập vi sinh vật", "Chào mừng các em đến với phòng thí nghiệm sinh học ảo NTU-BIOVLAB.
+Trong lớp học mô phỏng hôm nay, chúng ta cùng thực hiện kỹ thuật cấy ria trong phân lập vi sinh vật" ]
+}
+tracks/2/type = "value"
+tracks/2/path = NodePath("detail:visible")
+tracks/2/interp = 1
+tracks/2/loop_wrap = true
+tracks/2/imported = false
+tracks/2/enabled = true
+tracks/2/keys = {
+"times": PoolRealArray( 0, 1.3 ),
+"transitions": PoolRealArray( 1, 1 ),
+"update": 1,
+"values": [ true, false ]
+}
+tracks/3/type = "value"
+tracks/3/path = NodePath("lbl_intro:visible")
+tracks/3/interp = 1
+tracks/3/loop_wrap = true
+tracks/3/imported = false
+tracks/3/enabled = true
+tracks/3/keys = {
+"times": PoolRealArray( 0, 1.3 ),
+"transitions": PoolRealArray( 1, 1 ),
+"update": 1,
+"values": [ true, false ]
+}
+tracks/4/type = "value"
+tracks/4/path = NodePath("gioithieu:mouse_filter")
+tracks/4/interp = 1
+tracks/4/loop_wrap = true
+tracks/4/imported = false
+tracks/4/enabled = true
+tracks/4/keys = {
+"times": PoolRealArray( 0, 1.2 ),
+"transitions": PoolRealArray( 1, 1 ),
+"update": 1,
+"values": [ 2, 1 ]
+}
+tracks/5/type = "value"
+tracks/5/path = NodePath("huongdan:mouse_filter")
+tracks/5/interp = 1
+tracks/5/loop_wrap = true
+tracks/5/imported = false
+tracks/5/enabled = true
+tracks/5/keys = {
+"times": PoolRealArray( 0, 1.2 ),
+"transitions": PoolRealArray( 1, 1 ),
+"update": 1,
+"values": [ 2, 1 ]
+}
+tracks/6/type = "value"
+tracks/6/path = NodePath("thuchanh1:mouse_filter")
+tracks/6/interp = 1
+tracks/6/loop_wrap = true
+tracks/6/imported = false
+tracks/6/enabled = true
+tracks/6/keys = {
+"times": PoolRealArray( 0, 1.2 ),
+"transitions": PoolRealArray( 1, 1 ),
+"update": 1,
+"values": [ 2, 1 ]
+}
+tracks/7/type = "value"
+tracks/7/path = NodePath("thuchanh2:mouse_filter")
+tracks/7/interp = 1
+tracks/7/loop_wrap = true
+tracks/7/imported = false
+tracks/7/enabled = true
+tracks/7/keys = {
+"times": PoolRealArray( 0, 1.2 ),
+"transitions": PoolRealArray( 1, 1 ),
+"update": 1,
+"values": [ 2, 1 ]
+}
+tracks/8/type = "value"
+tracks/8/path = NodePath("kiemtra:mouse_filter")
+tracks/8/interp = 1
+tracks/8/loop_wrap = true
+tracks/8/imported = false
+tracks/8/enabled = true
+tracks/8/keys = {
+"times": PoolRealArray( 0, 1.2 ),
+"transitions": PoolRealArray( 1, 1 ),
+"update": 1,
+"values": [ 2, 1 ]
+}
+tracks/9/type = "value"
+tracks/9/path = NodePath("bunsen/ar_bunsen:visible")
+tracks/9/interp = 1
+tracks/9/loop_wrap = true
+tracks/9/imported = false
+tracks/9/enabled = true
+tracks/9/keys = {
+"times": PoolRealArray( 0, 1.2 ),
+"transitions": PoolRealArray( 1, 1 ),
+"update": 1,
+"values": [ false, true ]
+}
+tracks/10/type = "value"
+tracks/10/path = NodePath("diavk/ar_diavk:visible")
+tracks/10/interp = 1
+tracks/10/loop_wrap = true
+tracks/10/imported = false
+tracks/10/enabled = true
+tracks/10/keys = {
+"times": PoolRealArray( 0, 1.2 ),
+"transitions": PoolRealArray( 1, 1 ),
+"update": 1,
+"values": [ false, true ]
+}
+tracks/11/type = "value"
+tracks/11/path = NodePath("diamt/ar_diamt:visible")
+tracks/11/interp = 1
+tracks/11/loop_wrap = true
+tracks/11/imported = false
+tracks/11/enabled = true
+tracks/11/keys = {
+"times": PoolRealArray( 0, 1.2 ),
+"transitions": PoolRealArray( 1, 1 ),
+"update": 1,
+"values": [ false, true ]
+}
+tracks/12/type = "value"
+tracks/12/path = NodePath("quecay/ar_quecay:visible")
+tracks/12/interp = 1
+tracks/12/loop_wrap = true
+tracks/12/imported = false
+tracks/12/enabled = true
+tracks/12/keys = {
+"times": PoolRealArray( 0, 1.2 ),
+"transitions": PoolRealArray( 1, 1 ),
+"update": 1,
+"values": [ false, true ]
+}
+
+[node name="Homepage" type="Node2D"]
+script = ExtResource( 1 )
+
+[node name="background" type="Sprite" parent="."]
+position = Vector2( 607, 349 )
+scale = Vector2( 0.395964, 0.322791 )
+texture = ExtResource( 3 )
+
+[node name="hoten" type="Label" parent="."]
+anchor_left = 0.5
+anchor_top = 0.5
+anchor_right = 0.5
+anchor_bottom = 0.5
+margin_left = 398.0
+margin_top = 125.0
+margin_right = 648.0
+margin_bottom = 142.0
+custom_fonts/font = SubResource( 14 )
+text = "Họ và tên: "
+valign = 1
+uppercase = true
+__meta__ = {
+"_edit_use_anchors_": false
+}
+
+[node name="mssv" type="Label" parent="."]
+anchor_left = 0.5
+anchor_top = 0.5
+anchor_right = 0.5
+anchor_bottom = 0.5
+margin_left = 398.0
+margin_top = 145.0
+margin_right = 648.0
+margin_bottom = 162.0
+custom_fonts/font = SubResource( 14 )
+text = "              MSSV: "
+valign = 1
+uppercase = true
+__meta__ = {
+"_edit_use_anchors_": false
+}
+
+[node name="logo" type="TextureRect" parent="."]
+margin_left = 5.0
+margin_top = 9.0
+margin_right = 85.0
+margin_bottom = 89.0
+texture = ExtResource( 30 )
+expand = true
+__meta__ = {
+"_edit_use_anchors_": false
+}
+
+[node name="speaker" type="TextureButton" parent="."]
+visible = false
+margin_left = 829.0
+margin_top = 113.0
+margin_right = 1341.0
+margin_bottom = 625.0
+rect_scale = Vector2( 0.07, 0.07 )
+toggle_mode = true
+shortcut_in_tooltip = false
+action_mode = 0
+texture_normal = ExtResource( 38 )
+texture_pressed = ExtResource( 39 )
+__meta__ = {
+"_edit_use_anchors_": false
+}
+
+[node name="diavk" type="Sprite" parent="."]
+material = SubResource( 2 )
+position = Vector2( 391, 482 )
+scale = Vector2( 0.0929166, 0.117983 )
+texture = ExtResource( 2 )
+
+[node name="ar_diavk" type="Area2D" parent="diavk"]
+
+[node name="col_diavk" type="CollisionShape2D" parent="diavk/ar_diavk"]
+rotation = 1.5708
+shape = SubResource( 3 )
+
+[node name="diamt" type="Sprite" parent="."]
+material = SubResource( 6 )
+position = Vector2( 505, 482 )
+scale = Vector2( 0.0598958, 0.0807291 )
+texture = ExtResource( 7 )
+
+[node name="ar_diamt" type="Area2D" parent="diamt"]
+
+[node name="col_diamt" type="CollisionShape2D" parent="diamt/ar_diamt"]
+rotation = 1.5708
+shape = SubResource( 7 )
+
+[node name="quecay" type="Sprite" parent="."]
+material = SubResource( 9 )
+position = Vector2( 637, 480 )
+scale = Vector2( 0.127953, 0.113334 )
+texture = ExtResource( 8 )
+
+[node name="ar_quecay" type="Area2D" parent="quecay"]
+
+[node name="co_quecay" type="CollisionShape2D" parent="quecay/ar_quecay"]
+position = Vector2( 8.82324, 0 )
+rotation = 1.5708
+shape = SubResource( 10 )
+
+[node name="sound" type="AudioStreamPlayer" parent="."]
+stream = ExtResource( 4 )
+mix_target = 2
+
+[node name="sound_click" type="AudioStreamPlayer" parent="."]
+stream = ExtResource( 41 )
+mix_target = 2
+
+[node name="voice" type="AudioStreamPlayer" parent="."]
+volume_db = 10.0
+mix_target = 2
+
+[node name="detail" type="TextureRect" parent="."]
+visible = false
+modulate = Color( 0, 0, 0, 1 )
+anchor_left = 0.5
+anchor_top = 1.0
+anchor_right = 0.5
+anchor_bottom = 1.0
+margin_left = 200.0
+margin_top = 563.0
+margin_right = 1000.0
+margin_bottom = 683.0
+texture = ExtResource( 6 )
+expand = true
+stretch_mode = 1
+__meta__ = {
+"_edit_use_anchors_": false
+}
+
+[node name="lbl_detail" type="Label" parent="."]
+visible = false
+anchor_top = 0.5
+anchor_bottom = 0.5
+margin_left = 205.0
+margin_top = 563.0
+margin_right = 997.0
+margin_bottom = 683.0
+custom_colors/font_color = Color( 1, 1, 1, 1 )
+custom_fonts/font = SubResource( 4 )
+align = 1
+valign = 1
+autowrap = true
+__meta__ = {
+"_edit_use_anchors_": false
+}
+
+[node name="lbl_intro" type="Label" parent="."]
+anchor_left = 0.5
+anchor_top = 0.5
+anchor_right = 0.5
+anchor_bottom = 0.5
+margin_left = 203.0
+margin_top = 566.0
+margin_right = 998.0
+margin_bottom = 686.0
+rect_pivot_offset = Vector2( 411, 56 )
+custom_colors/font_color = Color( 1, 1, 1, 1 )
+custom_fonts/font = SubResource( 4 )
+text = "Chào mừng các em đến với phòng thí nghiệm sinh học ảo NTU-BIOVLAB. 
+Trong lớp học mô phỏng hôm nay, chúng ta cùng thực hiện kỹ thuật cấy ria trong phân lập vi sinh vật"
+align = 1
+valign = 1
+autowrap = true
+percent_visible = 0.0
+__meta__ = {
+"_edit_use_anchors_": false
+}
+
+[node name="bunsen" type="Sprite" parent="."]
+material = SubResource( 12 )
+position = Vector2( 808, 456 )
+scale = Vector2( 0.256919, 0.220109 )
+texture = ExtResource( 10 )
+__meta__ = {
+"_edit_group_": true
+}
+
+[node name="anm_bunsen" type="AnimatedSprite" parent="bunsen"]
+visible = false
+position = Vector2( -6.49317, -294.259 )
+scale = Vector2( 1.02613, 1.22319 )
+frames = SubResource( 13 )
+animation = "fire"
+frame = 16
+
+[node name="ar_bunsen" type="Area2D" parent="bunsen"]
+
+[node name="col_bunsen" type="CollisionPolygon2D" parent="bunsen/ar_bunsen"]
+polygon = PoolVector2Array( 128.445, 177.185, 85.6296, 154.469, 89.522, 145.383, 97.3064, 127.21, 93.4141, 109.037, 89.522, 95.4075, 81.7373, 81.7778, 66.1682, 72.6914, 54.4915, 63.605, 38.9221, 59.0618, 23.353, 54.5186, 3.89185, 49.9753, -0.000488281, 31.8025, -3.89282, 4.54321, -3.89282, -22.7161, -3.89282, -77.2346, -3.89282, -159.012, -0.000488281, -208.988, -3.89282, -227.161, -27.2466, -227.161, -50.6001, -222.617, -58.3848, -208.988, -50.6001, -131.753, -46.708, 45.4321, -66.1692, 54.5186, -93.4153, 63.605, -112.877, 77.2346, -128.446, 99.9507, -136.23, 131.753, -120.661, 168.099, -97.3076, 186.272, -70.0615, 199.901, -23.3542, 208.988, 3.89185, 208.988, -7.78516, 149.926, -0.000488281, 154.469, 11.6763, 149.926, 19.4609, 145.383, 120.66, 208.988, 116.768, 186.272 )
+
+[node name="hide" type="TextureRect" parent="."]
+visible = false
+modulate = Color( 0, 0, 0, 1 )
+anchor_left = 0.5
+anchor_top = 0.5
+anchor_right = 0.5
+anchor_bottom = 0.5
+margin_left = 200.0
+margin_top = 25.0
+margin_right = 1000.0
+margin_bottom = 563.0
+texture = ExtResource( 6 )
+expand = true
+__meta__ = {
+"_edit_group_": true,
+"_edit_use_anchors_": false
+}
+
+[node name="but_hide" type="TextureButton" parent="."]
+visible = false
+margin_left = 964.0
+margin_top = 31.0
+margin_right = 1397.0
+margin_bottom = 522.0
+rect_scale = Vector2( 0.07, 0.07 )
+mouse_default_cursor_shape = 2
+texture_normal = ExtResource( 31 )
+__meta__ = {
+"_edit_group_": true,
+"_edit_use_anchors_": false
+}
+
+[node name="but_hide_welcome" type="TextureButton" parent="."]
+visible = false
+margin_left = 968.0
+margin_top = 571.0
+margin_right = 1401.0
+margin_bottom = 1062.0
+rect_scale = Vector2( 0.07, 0.07 )
+mouse_default_cursor_shape = 2
+texture_normal = ExtResource( 31 )
+__meta__ = {
+"_edit_group_": true,
+"_edit_use_anchors_": false
+}
+
+[node name="zoomin" type="TextureRect" parent="."]
+visible = false
+margin_left = 366.0
+margin_top = 72.0
+margin_right = 816.0
+margin_bottom = 522.0
+expand = true
+__meta__ = {
+"_edit_use_anchors_": false
+}
+
+[node name="bg_menu" type="TextureRect" parent="."]
+modulate = Color( 0.215686, 0.2, 0.2, 1 )
+margin_left = 1115.0
+margin_top = 1.0
+margin_right = 1200.0
+margin_bottom = 701.0
+texture = ExtResource( 6 )
+expand = true
+__meta__ = {
+"_edit_use_anchors_": false
+}
+
+[node name="gioithieu" type="TextureRect" parent="."]
+margin_left = 1122.0
+margin_top = 70.0
+margin_right = 1192.0
+margin_bottom = 140.0
+rect_pivot_offset = Vector2( 35, 38 )
+mouse_default_cursor_shape = 2
+texture = ExtResource( 33 )
+expand = true
+__meta__ = {
+"_edit_use_anchors_": false
+}
+
+[node name="huongdan" type="TextureRect" parent="."]
+margin_left = 1122.0
+margin_top = 170.0
+margin_right = 1192.0
+margin_bottom = 240.0
+rect_pivot_offset = Vector2( 35, 38 )
+mouse_default_cursor_shape = 2
+texture = ExtResource( 44 )
+expand = true
+__meta__ = {
+"_edit_use_anchors_": false
+}
+
+[node name="thuchanh1" type="TextureRect" parent="."]
+margin_left = 1122.0
+margin_top = 270.0
+margin_right = 1192.0
+margin_bottom = 340.0
+rect_pivot_offset = Vector2( 35, 38 )
+mouse_default_cursor_shape = 2
+texture = ExtResource( 34 )
+expand = true
+__meta__ = {
+"_edit_use_anchors_": false
+}
+
+[node name="thuchanh2" type="TextureRect" parent="."]
+margin_left = 1122.0
+margin_top = 370.0
+margin_right = 1192.0
+margin_bottom = 440.0
+rect_pivot_offset = Vector2( 35, 38 )
+mouse_default_cursor_shape = 2
+texture = ExtResource( 45 )
+expand = true
+__meta__ = {
+"_edit_use_anchors_": false
+}
+
+[node name="kiemtra" type="TextureRect" parent="."]
+margin_left = 1122.0
+margin_top = 470.0
+margin_right = 1192.0
+margin_bottom = 540.0
+rect_pivot_offset = Vector2( 35, 38 )
+mouse_default_cursor_shape = 2
+texture = ExtResource( 35 )
+expand = true
+__meta__ = {
+"_edit_use_anchors_": false
+}
+
+[node name="ghichu" type="TextureRect" parent="."]
+visible = false
+margin_left = 955.0
+margin_top = 76.0
+margin_right = 1118.0
+margin_bottom = 132.0
+rect_pivot_offset = Vector2( 163, 28 )
+texture = ExtResource( 36 )
+expand = true
+__meta__ = {
+"_edit_use_anchors_": false
+}
+
+[node name="lbl_ghichu" type="Label" parent="ghichu"]
+margin_right = 137.0
+margin_bottom = 56.0
+custom_colors/font_color = Color( 0, 0.294118, 0.992157, 1 )
+custom_fonts/font = SubResource( 19 )
+align = 1
+valign = 1
+
+[node name="fadein" type="AnimationPlayer" parent="."]
+anims/RESET = SubResource( 17 )
+anims/fadein = SubResource( 18 )
+
+[node name="voice_welcome" type="AudioStreamPlayer" parent="."]
+stream = ExtResource( 37 )
+volume_db = 10.0
+
+[node name="intro_text" type="AnimationPlayer" parent="."]
+anims/RESET = SubResource( 20 )
+anims/run = SubResource( 21 )
+
+[node name="notebook_gioithieu" parent="." instance=ExtResource( 40 )]
+visible = false
+margin_left = 226.0
+margin_top = 58.0
+margin_right = 950.0
+margin_bottom = 542.0
+
+[node name="tailieuhuongdan" parent="." instance=ExtResource( 42 )]
+visible = false
+margin_left = 226.0
+margin_top = 58.0
+margin_right = 950.0
+margin_bottom = 542.0
+
+[node name="tracnghiem" parent="." instance=ExtResource( 43 )]
+visible = false
+
+[connection signal="pressed" from="speaker" to="." method="_on_speaker_pressed"]
+[connection signal="mouse_entered" from="diavk/ar_diavk" to="." method="_on_ar_diavk_mouse_entered"]
+[connection signal="mouse_exited" from="diavk/ar_diavk" to="." method="_on_ar_diavk_mouse_exited"]
+[connection signal="mouse_entered" from="diamt/ar_diamt" to="." method="_on_ar_diamt_mouse_entered"]
+[connection signal="mouse_exited" from="diamt/ar_diamt" to="." method="_on_ar_diamt_mouse_exited"]
+[connection signal="mouse_entered" from="quecay/ar_quecay" to="." method="_on_ar_quecay_mouse_entered"]
+[connection signal="mouse_exited" from="quecay/ar_quecay" to="." method="_on_ar_quecay_mouse_exited"]
+[connection signal="mouse_entered" from="bunsen/ar_bunsen" to="." method="_on_ar_bunsen_mouse_entered"]
+[connection signal="mouse_exited" from="bunsen/ar_bunsen" to="." method="_on_ar_bunsen_mouse_exited"]
+[connection signal="button_up" from="but_hide" to="." method="_on_but_hide_button_up"]
+[connection signal="pressed" from="but_hide_welcome" to="." method="_on_but_hide_welcome_pressed"]
+[connection signal="mouse_entered" from="gioithieu" to="." method="_on_gioithieu_mouse_entered"]
+[connection signal="mouse_exited" from="gioithieu" to="." method="_on_gioithieu_mouse_exited"]
+[connection signal="mouse_entered" from="huongdan" to="." method="_on_huongdan_mouse_entered"]
+[connection signal="mouse_exited" from="huongdan" to="." method="_on_huongdan_mouse_exited"]
+[connection signal="mouse_entered" from="thuchanh1" to="." method="_on_thuchanh1_mouse_entered"]
+[connection signal="mouse_exited" from="thuchanh1" to="." method="_on_thuchanh1_mouse_exited"]
+[connection signal="mouse_entered" from="thuchanh2" to="." method="_on_thuchanh2_mouse_entered"]
+[connection signal="mouse_exited" from="thuchanh2" to="." method="_on_thuchanh2_mouse_exited"]
+[connection signal="mouse_entered" from="kiemtra" to="." method="_on_kiemtra_mouse_entered"]
+[connection signal="mouse_exited" from="kiemtra" to="." method="_on_kiemtra_mouse_exited"]
+[connection signal="animation_finished" from="intro_text" to="." method="_on_intro_text_animation_finished"]
