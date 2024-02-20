@@ -1,0 +1,15 @@
+[remap]
+
+importer="mp3"
+type="AudioStreamMP3"
+path="res://.import/gas_flame.mp3-4fa3f28a9644853edd3dce75758e94ef.mp3str"
+
+[deps]
+
+source_file="res://sound/gas_flame.mp3"
+dest_files=[ "res://.import/gas_flame.mp3-4fa3f28a9644853edd3dce75758e94ef.mp3str" ]
+
+[params]
+
+loop=true
+loop_offset=0
